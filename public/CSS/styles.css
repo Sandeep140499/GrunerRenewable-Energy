@@ -1,0 +1,5444 @@
+/* Sandeep Code from Next as CSS */
+*
+{
+    font-family: 'Segoe UI', sans-serif;
+}.
+
+/* body{
+    background-color: white !important;
+} */
+.aboutuspagelorempara {
+    width: 189px;
+height: 130px;
+left: 104px;
+top: 36px;
+    font-family: 'Segoe UI', sans-serif;font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+color: rgba(19, 19, 19, 0.8);
+}
+.aboutusparagraph{
+        font-family: 'Segoe UI', sans-serif;font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+
+color: #FFFFFF;
+}
+.aboutusloremheading{
+
+    font-family: 'Segoe UI', sans-serif;font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+}
+.borderaboutus{
+    box-sizing: border-box;
+
+    /* position: absolute; */
+
+    
+    border: 1px solid #A7C957;
+    border-radius: 4px;
+}
+
+.borderaboutus {
+    padding: 20px;
+    margin: 0 0 4% 4%;
+}
+
+.chooseheading{
+    width: 357px;
+height: 179px;
+left: 80px;
+top: 270px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+/* font-weight: 400; */
+font-size: 14px;
+line-height: 19px;
+/* display: flex; */
+align-items: center;
+
+color: rgba(19, 19, 19, 0.8);
+
+}
+.renawable{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+/* line-height: 21px; */
+/* display: flex; */
+align-items: center;
+
+color: #131313;
+}
+.footercolorspan{
+    color: #A7C957;
+}
+#reqQuote{
+    background: #A7C957;
+    text-align:center;
+    padding: 60px;
+    color:#023047;
+    font-size: 24px;
+}
+#mediafirstimage{
+    width: 100%;
+    height: 60vh;
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/mediaframe1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+  .mediapagefeatures{
+    width: 952px;
+    height: 72px;
+    left: 80px;
+    top: 164px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 85px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+}
+.mediafirstimage-about-paragraph{
+    width: 624px;
+height: 64px;
+left: 80px;
+top: 260px;
+
+    font-family: 'Segoe UI', sans-serif;  
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+
+color: #FFFFFF;
+}
+.mediaengg{
+
+}
+.heading{
+                    font-family: 'Segoe UI', sans-serif;
+        font-weight: 700;
+        font-size: 64px;
+        align-items: center;
+        color: #FFFFFF;
+    }
+    .email{
+        color: #A7C957;
+    }
+    #fluid-image{
+    width: 100%;
+    height: calc(100% / 2.41)
+    }
+    #logo{
+        max-height: 72px;
+        max-width: 222px;        
+    }
+
+    .social-icons i
+    {
+        padding:0 0 10px 10px;
+    }
+
+
+    #uppertext{
+        padding-top: 15px;
+        text-align: center;
+    }
+    #email{
+        text-align: center;
+        margin: auto;
+        font-family: Segoe;
+    }
+    /* #flex-conatiner1{
+        background: #FFFFFF;
+    } */
+    #navbar{
+
+            font-family: 'Segoe UI', sans-serif;
+
+    font-size: 1rem;
+
+    margin-left: 30px;
+    }
+    
+    .navbarOne{
+        margin-left: 30px;
+        font-weight: 600 !important;
+        color: black;
+            font-family: 'Segoe UI', sans-serif;
+    }
+    a.nav-link.active {
+        color:#A7C957;
+    }
+
+    .nav-link:focus, .nav-link:hover {
+        color: #A7C957 !important;
+    }
+    .ourValueBagroundColor {
+        background: #A7C957;
+    }
+    .our-value{
+            font-family: 'Segoe UI', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            color: #023047;
+    }
+    .secondimage{
+        width: 100%;
+        height: auto;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://gremedia.sgp1.digitaloceanspaces.com/media/Frame2.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 590px;
+    }
+    .welcome{
+            font-family: 'Segoe UI', sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        color: #FFFFFF;
+    }
+    .logowhiteplant{
+        /* /* width: 72px; */
+height: 72px; 
+/* left: 80px;
+top: 374px; */
+color: #FFFFFF;
+
+/* background: url(); */
+    }
+    .fulidbutton{
+        width: 240px;
+        height: 72px;
+        left: 464px;
+        top: 374px;
+        background: #A7C957;
+        color: #023047;
+        border-radius: 4px;
+    }
+    .color-light{
+        color:#FFFFFF;
+    }
+    .icons{
+        color: #A7C957;
+        margin-right: 2px;
+    }
+    .bussection{
+    width: 100%;
+    height: calc(100%/2.41);
+    }
+    .indexingcolumbs{
+        padding-left: 80px;
+        margin-top: -30px !important;
+
+    }
+    .years{
+        padding: 60px;
+        /* margin-left: 80px !important; */
+    background: #A7C957;
+    border-radius: 2px;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .homepageparagraph{
+        width: 663px;
+height: 120px;
+left: 32px;
+top: 90px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+
+color: rgba(19, 19, 19, 0.8);
+
+    }
+    .yearSize{
+        /* width: 146px;
+        height: 41px; */
+
+        
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        /* line-height: 53px; */
+        /* display: flex; */
+        /* align-items: center; */
+        /* text-align: center; */
+        
+        color: #023047;
+    }
+    .color{
+        color: rgba(19, 19, 19, 0.8) !important;
+    }
+    .indexing{
+        margin-top: -20px;
+    }
+    .utlization{
+        border: 0px solid black;
+        min-height: 210px;
+        background-color: #FFFFFF;
+        /* padding: 40px; */
+        box-shadow: 5px 10px 5px -5px #eee;
+    }
+
+    h5{
+        font-size: 20px;
+        font-weight: bold !important;
+    }
+    .renewable{
+        font-size: 2rem;
+        font-weight: bolder;   
+    }
+    .aboutus{
+        margin-left: -240px;
+    }
+    #aboutus{
+        /* margin-left: -287px; */
+        border: 2px solid black;
+        background: rgba(2, 48, 71, 0.2);
+        text-align: left;
+        /* border: 0px solid  rgba(2, 48, 71, 0.2); */
+    }
+    .lorem{
+        margin-left: 40px;
+        text-align: left;
+    }
+    .fontlorem{
+        /* position: absolute; */
+
+
+                        font-family: 'Segoe UI', sans-serif;
+
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+
+            color: #023047;
+    }
+    .reqquo{
+        padding: 20px 40px 20px 40px !important;
+        background: #023047 !important;
+    border-radius: 4px !important;
+    }
+
+    .checkbutton{
+        color: #A7C957;
+    }
+    .space{
+        margin-left: 5px;
+    }
+    .imagesonimages{
+        margin-bottom: 20px;
+    }
+    .button{
+        /* margin-left: -276px; */
+        background: rgba(2, 48, 71, 0.2) !important;
+        /* border: 0px solid  rgba(2, 48, 71, 0.2); */
+    }
+    .ourtextheading{
+            font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 43px;
+display: flex;
+align-items: center;
+
+color: #023047;
+    }
+    .infofont{
+        width: 146px;
+        height: 26px;
+        left: 187px;
+        top: 141px;
+        
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #023047;
+        
+    }
+    .chooseheading{
+        width: 173px;
+        /* font-weight: 600; */
+font-size: 16px;
+height: 38px;
+
+
+background: rgba(2, 48, 71, 0.2);
+    }
+.headingbettersource{
+
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 43px;
+/* display: flex; */
+align-items: center;
+color: #023047;
+}
+.whywechoos-para{
+left: 732px;
+top: 222px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: rgba(19, 19, 19, 0.8);
+}
+    .betterSource{
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    .top-section-heading-break{
+    border: 2px solid #A7C957;
+    opacity: 1 !important;
+    }
+    .headingenergy{
+        /* width: 519px; */
+/* height: 88px; */
+left: 80px;
+top: 3113px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 43px;
+/* display: flex; */
+/* align-items: center; */
+
+color: #023047;
+
+    }
+    .photos{
+        
+    margin-top: 184px;
+
+    }
+    .biogaspara{
+/* width: 519px; */
+/* height: 124px; */
+/* left: 80px;
+top: 3225px; */
+
+    font-family: 'Segoe UI', sans-serif;
+/*     font-family: 'Segoe UI', sans-serif; */
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: rgba(19, 19, 19, 0.8);
+    }
+    .biospan{        
+            font-family: 'Segoe UI', sans-serif;
+        /* font-style: normal; */
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 21px;
+        /* display: flex; */
+        align-items: center;
+        text-align: left;
+        
+        color: #023047;        
+        background: rgba(2, 48, 71, 0.2);
+    }
+
+    .biogasbutton{
+        width: 240px;
+height: 72px;
+    font-family: 'Segoe UI', sans-serif;
+border-radius: 4px;
+background-color: #023047;
+font-weight: normal;
+font-size: 16px;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+
+    }
+
+    .lorems{
+        text-align: left;
+    }
+    .leftbutton{
+        margin-left: -530px;
+    }
+    .colorreq{
+        background: #A7C957;
+    border-radius: 4px !important;
+    }
+    .border-colorofhomepage{
+        box-sizing: border-box;
+
+        /* position: absolute; */
+        left: 732px;
+        top: 356px;
+        
+        background: #FFFFFF;
+        border: 1px solid #A7C957;
+        border-radius: 4px;
+    }
+
+    span.ryticonimage {
+        top: -40px;
+        position: relative;
+    }
+
+    .ryt-below {
+        margin-top: 30px !important;
+    }
+
+    .ryt-below-abt
+    {
+        margin-top: 50px !important;
+    }
+
+    .lftryt
+    {
+        display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    }
+
+    .homepagesgreenborderheader{
+            font-family: 'Segoe UI', sans-serif;
+/* font-style: normal; */
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+
+color: #023047;
+    }
+    .border-colorofhomepagenbiogas{
+        /* box-sizing: border-box; */
+
+/* position: absolute; */
+background: #FFFFFF;
+border: 1px solid #A7C957;
+border-radius: 4px;
+    }
+    .greenborderallignment{
+        margin-top: 29px;
+        margin-left: 13px;
+    }
+    .homepagegreenborderparagraph{
+            font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+
+color: rgba(19, 19, 19, 0.8);
+    }
+    .border-colorofhomepage2{
+        box-sizing: border-box;
+
+position: absolute;
+width: 270px;
+height: 243px;
+/* left: 1059px; */
+/* top: 396px; */
+
+background: #FFFFFF;
+border: 1px solid #A7C957;
+border-radius: 4px;
+    }
+    .hero{
+        width: 100%;
+        height: auto;
+        background: linear-gradient(0deg, rgba(2, 48, 71, 0.95), rgba(2, 48, 71, 0.95)),
+        url(https://gremedia.sgp1.digitaloceanspaces.com/media/frame8.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .Biocng{
+        /* width: 124px;
+height: 38px; */
+left: 772px;
+top: 57px;
+    font-family: 'Segoe UI', sans-serif;
+background: rgba(167, 201, 87, 0.2);
+
+/* width: 92px; */
+
+top: 9px;
+
+
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+
+align-items: center;
+text-align: center;
+
+color: #A7C957;
+    }
+    .biocngheading{
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 43px;
+display: flex;
+align-items: center;
+/* margin-left: 10px; */
+
+color: #FFFFFF;
+    }
+    .paraheadingcng{
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+/* display: flex; */
+align-items: center;
+
+color: #FFFFFF;
+    }
+    .cngbutton{
+            font-family: 'Segoe UI', sans-serif;
+/* font-style: normal; */
+font-weight: 600;
+font-size: 16px;
+/* line-height: 21px; */
+/* display: flex; */
+align-items: center;
+text-align: center;
+
+color: #023047;
+        width: 240px;
+height: 72px;
+left: 772px;
+top: 458px;
+
+background: #A7C957;
+border-radius: 4px;
+    }
+    .projectspan{
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+background: rgba(2, 48, 71, 0.2);
+        color: #023047;
+    }
+    .indexspanheading{
+        background: rgba(2, 48, 71, 0.2);
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+/* line-height: 21px;
+display: flex; */
+/* align-items: center; */
+/* text-align: center; */
+
+color: #023047;
+
+    }
+.projectHeading{
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 43px;
+/* display: flex; */
+align-items: center;
+text-align: center;
+
+color: #023047;
+    }
+    .projectHeadingform{
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    /* display: flex; */
+
+    
+    color: #023047;
+        }
+
+    .ourteamheading{
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+display: flex;
+align-items: center;
+
+color: #023047;
+
+/* color: #023047; */
+    }
+    .Biocngbutton{
+        background: #A7C957 !important;
+    border-radius: 4px !important;
+    }
+    .centerButton{
+        /* text-align: center !important ; */
+        margin-left: 260px !important ;
+    }
+    .ourteam{
+        margin-left: -190px;
+    }
+    .TESTIMONIALS{
+        margin-left: -600px;
+    }
+    .gettouch{
+        margin-left: -500px;
+    }
+    .formssubmission{
+        width: 688px;
+height: 728px;
+left: 672px;
+top: 48px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+border-radius: 4px;
+    }
+    .caption-baground-indexing{
+        /* background: #A7C957; */
+        padding: 15px 20px 5px 20px;
+        /* position: absolute; */
+width: 278px;
+height: 80px;
+/* left: 563px;
+top: 384px; */
+z-index: 1;
+
+background: #A7C957;
+border-radius: 2px;
+    }
+    .ourteamparagraph{
+
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: rgba(19, 19, 19, 0.8);
+    }
+    .getintouchspan{
+        /* width: 152px; */
+background-color:rgba(2, 48, 71, 0.2);;
+
+left: 16px;
+top: 9px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+/* line-height: 21px; */
+/* display: flex; */
+/* align-items: center;
+text-align: center; */
+
+color: #023047;
+    }
+    .getintouchpara{
+        width: 570px;
+height: 52px;
+left: 80px;
+top: 254px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: rgba(19, 19, 19, 0.8);
+    }
+    .getcotact{
+color: #023047; 
+    }
+    /* .container-hight{} */
+    .gettouchpng{
+        /* position: absolute; */
+        width: 152px;
+        height: 38px;
+        left: 80px;
+        top: 80px;
+        
+        background: rgba(2, 48, 71, 0.2); 
+    }
+    .radionames{
+        width: 24px;
+height: 24px;
+left: 36px;
+top: 10px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: rgba(19, 19, 19, 0.8);
+
+    }
+    .formsubmittbuttin{
+        width: 580px;
+        height: 72px;
+        left: 54px;
+        top: 616px;
+        
+        background: #A7C957;
+        border-radius: 4px;
+    }
+    .radiobutton{
+        width: 24px;
+height: 24px;
+left: 0px;
+top: 10px;
+
+background: #FFFFFF;
+border: 1px solid #A7C957;
+border-radius: 24px;
+    }
+    .getintouchheading{
+        width: 570px;
+height: 88px;
+left: 80px;
+top: 150px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 43px;
+display: flex;
+align-items: center;
+
+color: #023047;
+    }
+    .whitebackroundform{
+        /* position: absolute; */
+min-height: 728px;
+left: 672px;
+top: 48px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+border-radius: 4px;
+    }
+    .greenparagraphbiopaspage{
+        /* width: 848px;
+height: 112px; */
+left: 297px;
+top: 270px;
+
+background: #A7C957;
+border-radius: 2px;
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+padding: 10px;
+align-items: center;
+    }
+    .biogasemergencyparagraph{
+            font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+
+color: #023047;
+
+    }
+    .imageindex{
+        z-index: -1;
+    }
+    .sustainbuttonblue{
+        width: 240px;
+height: 72px;
+left: 1120px;
+top: 118px;
+color: #FFFFFF !important;
+background: #023047 !important;
+border-radius: 4px;
+    }
+    /* .marginofphotos{
+        position: absolute !important;
+    } */
+    .bioemergencyheading{
+            font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+display: flex;
+align-items: center;
+
+color: #023047;
+    }
+    .biogaspageparagraph{
+        /* width: 485px; */
+/* height: 44px; */
+/* left: 875px;
+top: 150px; */
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+
+color: #023047;
+    }
+    .project-details-from{
+        margin: auto;
+        background: #A7C957;
+        border-radius: 2px;
+    }
+    .getintouchbackgroundcolor{
+        /* width: 672px; */
+min-height: 520px;
+/* background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/conatctpage.jpg); */
+/* margin-left: auto; */
+background: #A7C957;
+    }
+.biogaspageheading{
+    width: 244px;
+height: 24px;
+left: 875px;
+top: 110px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+/* display: flex; */
+align-items: center;
+
+color: #023047;
+}
+.gallaryimagesimage{
+    position: absolute;
+width: 628px;
+height: 628px;
+left: 80px;
+top: 230px;
+}
+    .indiaMAP{
+        width: 533px;
+height: 587px;
+left: 80px;
+top: 0px;
+    }
+/* Sandeep Code Ends */
+
+#frame-1{
+    /* border: 2px solid black; */
+    margin: 0px;
+    padding: 0px;
+}
+.fourImages{
+    padding-left: 33px;
+    padding-right: 40px;
+    padding-top: 38px;
+    padding-bottom: 44px;
+}
+.img{
+    width:100%;
+    height: auto;
+z-index: 0;
+}
+/* .text-over-img {
+    z-index:1;
+    font-size: 1.2em
+    margin-top: -100px;
+    } */
+    .centered-Images {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 470px;
+
+            font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 64px;
+/* display: flex; */
+align-items: center;
+text-align: center;
+      }
+      .containerImages{
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+      .contactusackgroundcolor{
+        /* width: 598px; */
+/* height: 600px; */
+left: 842px;
+top: 0px;
+background: #A7C957;
+      }
+#greenreq{
+    background: #A7C957; 
+}
+.aboutpagefooterparagraph{
+    color: #A7C957;
+}
+.conatctusparagraph{
+    width: 316px;
+height: 72px;
+left: 200px;
+top: 168px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+
+color: rgba(19, 19, 19, 0.8);
+}
+.ourofficeheader{
+    width: 172px;
+height: 24px;
+left: 200px;
+top: 120px;
+
+      font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 29px;
+display: flex;
+align-items: center;
+
+
+}
+ .icon{
+    margin: 10px;
+    color: green;
+     padding-left: 270px;
+}
+.pho{
+    margin: 10px;
+    color: green;
+    padding-left: 100px;  
+}
+/* .bioimages{
+    border: 2px solid red;
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/biogas-picture.jpg);
+} */
+
+.fac{
+    margin:2px;
+    padding-left: 20px;
+    
+     
+}
+
+.twi{
+    margin: 2px;
+    
+}
+
+.ins{
+    margin: 2px;
+}
+
+.lin{
+    margin: 2px;
+    
+} 
+
+ /* .req{
+    background-color: #0aaa07fa;
+    height: 40% !important;
+    padding: 50px;
+
+}
+.navbar{
+    height: 0% !important;
+        padding-top: .0rem !important;
+    padding-bottom: .0rem !important;
+}
+
+.icon1{
+    margin-left: 14% !important;
+    margin-right: -14% !important;
+}
+
+.nav{
+    justify-content: center;
+} */
+.img-fluid{
+    width: 100%;
+    height: calc(100% / 2.41);
+}
+
+#reqQuote{
+/* margin-right: 10px; */
+}
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+.heading-frame-third{
+        font-family: 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    align-items: center;    
+    color: #023047;    
+}
+a{
+    text-decoration: none;
+
+}
+
+.howwefunction{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+/* display: flex; */
+align-items: center;
+text-align: center;
+
+
+background: rgba(167, 201, 87, 0.2);
+color: #A7C957;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* gallery detail */
+.gallerydetail{
+    /* position: absolute; */
+width: 124px;
+height: 38px;
+left: 658px;
+top: 64px;
+
+background: rgba(2, 48, 71, 0.2);
+
+}
+
+#gallerydetailbio{
+    width: 368px;
+height: 40px;
+left: 536px;
+top: 134px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 43px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #023047;
+}
+
+.gallerydetailimage{
+    width: 628px;
+height: 628px;
+left: 80px;
+top: 230px;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+.colorfordetailspage{
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+
+color: rgba(19, 19, 19, 0.8);
+}
+.gallerydetailimage1{
+    width: 628px;
+height: 628px;
+left: 80px;
+top: 230px;
+margin-top: 50px;
+margin-bottom: 50px;
+margin-left: 30px;
+}
+
+
+#hero{
+    width: 100%;
+    height: 60vh;
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/banner-image-about.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+
+}
+.dateblog{
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    
+    color: #131313;
+}
+#hero h1{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: white;
+    margin: 0 0 10px 0;
+}
+#hero p{
+    color: white;
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 400  
+}
+
+#van{
+    height: 500px;
+    width: 400px;
+    margin-top: 10px;  
+    
+}
+
+#frame-2{
+    /* margin-top: 50px;   */
+    /* margin-left: 50px; */
+    padding: 10px;
+}
+
+#text{
+    margin-top: 50px;
+padding-right: 10f0px;
+}
+.overviewspan{
+    width: 128px;
+}
+.projectspanblog{
+    width: 124px;
+height: 38px;
+left: 658px;
+top: 80px;
+
+background: rgba(2, 48, 71, 0.2);
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+display: flex;
+/* align-items: center;
+text-align: center; */
+
+color: #023047;
+
+}
+.emergyspan{
+    width: 256px;
+height: 38px;
+left: 592px;
+top: 80px;
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+/* display: flex;
+align-items: center;
+text-align: center; */
+
+color: #023047;
+
+background: rgba(2, 48, 71, 0.2);
+}
+.datespanblog{
+    width: 256px;
+height: 38px;
+left: 592px;
+top: 40px;
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+display: flex;
+/* align-items: center;
+text-align: center; */
+
+color: #023047;
+
+background: rgba(2, 48, 71, 0.2);
+}
+/* .check{
+    margin-top: 50px;
+    color: #A7C957;
+    letter-spacing: 0.9;
+} */
+
+#sign {
+    /* margin: 10px; */
+    color: #A7C957;
+    letter-spacing: 0.5;
+    
+}
+#kuchbhidedo{
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    /* display: flex; */
+    align-items: center;
+    
+    color: #000000;
+
+}
+
+#section-loyality h6{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+#section-loyality p{
+    font-size: 14px;
+}
+
+.addYourTextHeading{
+    /* font-style: normal; */
+        font-family: 'Segoe UI', sans-serif;
+font-weight: 700;
+font-size: 32px;
+color:#023047;
+font-weight: bolder;
+
+}
+
+.girishBansal-heading{
+        font-family: 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+
+    color: #023047;
+}
+.Designation{
+        font-family: 'Segoe UI', sans-serif;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+color: #023047;
+}
+.caption-baground{
+    background: #A7C957;
+    /* padding: ; */
+    margin-left: 60px;
+    margin-top: -30px;
+    position: absolute;
+    min-width: 230px;
+}
+
+.caption-background{
+    background: #A7C957;
+    /* padding: ; */
+    /* margin-left: 60px;
+    margin-top: -30px; */
+    position: absolute;
+    min-width: 294px;
+    padding: 15px;
+}
+.navbarOne{
+    /* margin-left: 0px; */
+}
+
+button{
+    margin-top: 50px;
+    background-color: #557803;
+    color: #557803;
+}
+.our-values-section{
+    /* margin-left: 270px; */
+        font-family: 'Segoe UI', sans-serif;
+    background: #A7C957;
+    padding-bottom: 0px;
+}
+.para{
+    margin-top: 150px; 
+    
+    background-color: #A7C957;
+    margin-left: 250px;
+    padding-left: 50px;
+    /* width: 80%; */
+} 
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+.para button{
+    color: black;
+    background-color: #557803;
+    border-radius: none;
+    border: #557803;
+    margin-top: 30px;
+    z-index: 1;
+    
+}
+.para p{
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.images{
+    margin-top: 50px;
+}
+
+/* container{
+    margin-top: 30px;
+    
+    
+<<<<<<< HEAD
+}  */
+
+
+.container-button{
+
+    background-color: #557803;
+    color: black;
+    margin-left: 30px;
+    
+}
+.headingProvide{
+ 
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+}
+.container h2{
+    /* margin-top: 30px;
+    margin-left: 30px;
+    padding-bottom: 10px; */
+}
+
+.col{
+    /* margin-left: 10px; */
+    /* background-color:#A7C957;
+    padding-bottom: 30px; */
+}
+
+/* .container p{
+    margin-left: 30px;
+    margin-right: 30px;
+    
+} */
+.imgframe4{
+    /* height: 100%; */
+}
+/* .container-img{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+} */
+.border{
+    /* height: ; */
+    /* margin-top: 60px; */
+    /* border: 2px solid rgb(149, 255, 0); */
+}
+.divconat{
+    margin-left: 120px !important;
+    /* border: 2px solid black; */
+    height: 260px;
+    width: 550px;
+    margin-top: 80px;
+    /* z-index: -10 !important; */
+    /* margin-left: 200px; */
+    background-color: green;
+}
+.imagesmountain{
+    margin-left: 605px;
+    margin-top: -340px;
+    /* z-index: -1 !important; */
+}
+#fra{
+    margin-left: 80px;
+}
+.funcationateSection{
+    text-align: left;
+}
+.zero{
+    background: linear-gradient(0deg, rgba(2, 48, 71, 0.95), rgba(2, 48, 71, 0.95)),url(About.jpeg);
+}
+
+.Sustainability{
+    width: 100%;
+    height: auto;
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/TREESSUS.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    /* padding: 60px ; */
+}
+.colorPrevious{
+    /* position: absolute; */
+width: 164px;
+height: 154px;
+left: 0px;
+top: 247px;
+background: #A7C957;
+}
+.paragraph-lorem-function{
+  
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+}
+
+.greeenblankfoam{
+width: 410px;
+height: 516px;
+left: 881px;
+top: 470px;
+margin: auto;
+background: #A7C957;
+border-radius: 2px;
+}
+
+.placeholderdetails{
+    width: 77px;
+height: 24px;
+left: 32px;
+top: 131px;
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+display: flex;
+align-items: center;
+
+color: #023047;
+
+}
+
+
+.placeholderdetails2 {
+    width: 77px;
+    height: 24px;
+    left: 32px;
+    top: 131px;
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    
+    color: #023047;
+    
+
+}
+
+.aboutusloremheadings{
+    width: 187px;
+height: 20px;
+left: 16px;
+top: 52px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+
+color: #023047;
+
+}
+
+
+.Sustainabilitytext{
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+    /* margin-top: 118px; */
+}
+.Sustainabilitybutton{
+    width: 240px;
+    height: 56px;
+    left: 600px;
+    top: 334px;
+    
+    background: #A7C957;
+    border-radius: 4px;
+}
+.treesustainable{
+    width: 100%;
+    height: 100%;
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/TREE.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* #cen h2{
+    align-items: center;
+    color: white;
+     margin-left: 630px;
+} */
+
+/* #cen button{
+    align-items: center;
+    color: black;
+background: #A7C957;
+border-radius: 4px;
+} */
+
+.container1{
+    margin-top: 50px;
+}
+
+.smallpicture{
+    position: absolute;
+}
+.media-body{
+    margin-left: 65px;
+}
+.sustainheading{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+display: flex;
+align-items: center;
+
+color: #023047;
+}
+.container1 img{
+    width: 500px;
+    height: 200px;
+    margin-left: 100px;
+    padding-left: 200px;
+}
+
+.container1 p{
+    margin-right: 100px;
+    padding-right: 200px;
+}
+
+.container2 img{
+    width: 250px;
+    height: 250px;
+     margin-left: 80px;
+    /* margin-right: 50px; */  
+}
+.viewmorebutton{
+    width: 240px;
+height: 72px;
+left: 600px;
+top: 1488px;
+font-family: ;
+background: #A7C957 !important;
+border-radius: 4px;
+/* font-style: normal; */
+font-weight: 600 !important;
+font-size: 16px;
+line-height: 21px;
+/* display: flex; */
+align-items: center;
+/* text-align: center; */
+
+color: #023047;
+}
+#herobiogas{
+    width: 100%;
+    height: 60vh;
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/bioimage1.png);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:white;
+    
+}
+
+.ourprojectparagraph{
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+/* font-weight: 600; */
+font-size: 18px;
+line-height: 24px;
+/* display: flex; */
+align-items: center;
+
+color: #FFFFFF;
+}
+.background{
+    background-color: #FFFFFF;
+}
+.exploremorebutton{
+    position: absolute;
+    width: 240px;
+    height: 56px;
+    left: 16px;
+    font-weight: 600;
+    top: 137px;
+    color: #023047;
+    background: #A7C957;
+    border-radius: 4px;
+}
+.containerImages {
+    /* position: relative; */
+    width: 100%;
+    margin:auto;
+  }
+  
+  .containerImages img {vertical-align: middle;}
+  
+  .containerImages .contentParagraph {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    bottom: 0;
+    background: rgba(2, 48, 71, 0.7);
+}
+
+    #hero-our-project{
+        width: 100%;
+        height: 60vh;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/our-project-frame.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #hero-our-project h1{
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+        color: white;
+         margin: 0 0 10px 0; 
+       text-align: left;
+    }
+
+    #hero-our-project p{
+        color: white;
+        margin-bottom: 40px;
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: 10px;
+        text-align: left;  
+    }
+
+
+.bayehojaa{
+    text-align: left;
+}
+
+
+#Blogs{
+    width: 100%;
+    height: 60vh;
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/Blogs.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+#Blogs h1{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: white;
+     margin: 0 0 10px 0; 
+   text-align: left;
+
+}
+
+#Blogs p{
+    color: white;
+    margin-bottom: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 0px;
+    text-align: left;
+    
+}
+.navs{
+    margin-left: 30px;
+    margin-top: 30px;
+    color: #000000 !important;
+    
+}
+.ritathakur{
+    font-style: normal;
+font-weight: 600;
+font-size: 16px;
+/* line-height: 21px; */
+display: flex;
+/* align-items: center; */
+
+color: #023047;
+}
+.dateblog{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+margin-left: 37px;
+/* display: flex; */
+/* align-items: center; */
+
+color: #131313;
+}
+.ritadesignation{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+/* line-height: 19px; */
+/* display: flex; */
+align-items: center;
+
+color: #131313;
+}
+.projectdetailscomma{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+
+color: #023047;
+}
+.blogdetailspara{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+
+color: #023047;
+}
+
+.text-block-ryt-img
+{
+    background: #A7C957;
+    position: ABSOLUTE;
+    right: 0%;
+    /* padding: 100px; */
+    bottom: 0px;
+    width: 50%;
+    height: 50%;
+}
+.mediapageimage1{
+    position: relative;
+}
+.mediapage2{
+    position: relative;
+}
+.text-block-left-img{
+    background: #A7C957;
+    position: ABSOLUTE;
+    left: 0%;
+    /* padding: 100px; */
+    bottom: 0px;
+    width: 50%;
+    height: 50%;
+}
+.blogheading{
+    
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 43px;
+display: flex;
+align-items: center;
+
+color: #023047;
+}
+.projectdetailspadding{
+    /* padding-left: calc(var(--bs-gutter-x) * .0) !important; */
+}
+.card{
+    margin-left: 50px;
+    margin-right: 50px;
+    border: none;
+}
+.aboutsbutton{
+    width: 240px;
+height: 72px;
+left: 80px;
+top: 489px;
+color: #FFFFFF;
+background: #023047;
+border-radius: 4px;
+}
+
+button {
+    background-color: var(--accent);
+    border: none;
+        font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #A7C957;
+    color: black;
+     /* height: 30px; */
+    margin-top: 15px; 
+    /* text-align: center; */
+}
+
+
+#project{
+    width: 100%;
+    height: 60vh;
+    background: url();
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+
+.details-image{
+    /* margin-left: 150px; */
+    justify-content: center;
+    text-align: center;
+}
+.overviewspan{
+    /* width: 124px;
+height: 38px; */
+left: 190px;
+top: 550px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #023047;
+
+background: rgba(2, 48, 71, 0.2);
+}
+.headingoverview{
+    /* width: 627px; */
+/* height: 132px; */
+left: 190px;
+top: 620px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 43px;
+display: flex;
+align-items: center;
+
+color: #023047;
+}
+.overviewpara{
+    /* width: 626px;
+height: 219px; */
+left: 190px;
+top: 776px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+/* display: flex; */
+/* align-items: center; */
+
+color: rgba(19, 19, 19, 0.8);
+}
+#project h1{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: white;
+     margin: 0 0 10px 0; 
+   text-align: left;
+
+}
+.ritathakurtext{
+    /* margin: 34px !important; */
+}
+
+#project p{
+    color: white;
+    margin-bottom: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 10px;
+    text-align: left;  
+}
+
+#projects button{
+    text-align: center;
+    
+}
+
+
+
+  .text-center-button{
+    /* background: rgba(2, 48, 71, 0.2); */
+    color: #023047;
+    border-radius: none;
+
+    margin-top: 40px;
+      font-family: 'Segoe UI', sans-serif;
+font-size: 16px;
+font-weight: 600;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: center;
+height: 50px;
+width: 100px;
+
+    /* margin-top: 40px; */
+
+    
+  }
+
+  /* .text-center{
+      font-family: 'Segoe UI', sans-serif;
+font-size: 30px;
+font-weight: 700;
+line-height: 43px;
+letter-spacing: 0em;
+text-align: center;
+  } */
+
+  #frame-4{
+    /* width: 411px;
+    height: 529px;
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/Supply.jpg);
+     background-position: left; 
+    background-size: cover;
+    background-repeat: no-repeat; */
+
+  }
+
+  #frame-4 img{
+    /* height: 100%; */
+    margin-left: 30px;
+  }
+
+  #gallery-our-project{
+    width: 100%;
+    height: 60vh;
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/Gallery.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #gallery-our-project h1{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: white;
+     margin: 0 0 10px 0; 
+   text-align: left;
+  }
+
+  #gallery-our-project p{
+    color: white;
+    margin-bottom: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 10px;
+    text-align: left;  
+  }
+
+  
+.galleryparagraph{
+    /* width: 624px; */
+/* height: 64px; */
+left: 80px;
+top: 260px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+
+color: #FFFFFF;
+}
+
+ .layout{
+     /* position: left;  
+width: 628px;
+height: 416px;
+left: 50px;
+top: 0;
+margin-left: 30px;  */
+
+
+/* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://gremedia.sgp1.digitaloceanspaces.com/media/bio2.jpeg); */
+/* color: white;
+text-align: center; */
+margin-top: 50px;
+margin-left: 10px;
+margin-left: 50px; 
+ margin-right: 50px; 
+
+
+  }
+ 
+   .layout1{
+    position: left;  
+width: 628px;
+height: 416px;
+left: 80px;
+top: 0;
+color: white;
+text-align: center;
+margin-left: 50px; 
+
+
+/* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://gremedia.sgp1.digitaloceanspaces.com/media/Girls.jpeg); */
+margin-top: 50px;
+ }
+
+ .layout1 h2{
+    text-align: center;
+    margin-top: 300px;
+    padding-top: 100px;
+
+ }
+
+ .layout2{
+    position: left;  
+width: 628px;
+height: 416px;
+left: 80px;
+top: 0;
+margin-left: 50px;
+color: white;
+text-align: center;
+
+/* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://gremedia.sgp1.digitaloceanspaces.com/media/Engin.jpeg); */
+ }
+
+ .layout3{
+    position: left;  
+width: 628px;
+height: 416px;
+left: 80px;
+top: 0;
+margin-left: 50px;
+color: white;
+text-align: center;
+
+/* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://gremedia.sgp1.digitaloceanspaces.com/media/onion.jpeg); */
+ }
+
+ #contact_section{
+/* width: 1440px; */
+height: 500px;
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/contact\ banner.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
+ .contact_heading{
+    width: 952px;
+height: 72px;
+left: 80px;
+top: 164px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 85px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+ }
+
+ .contact_paragraph{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+
+color: #FFFFFF;
+
+ }
+
+ 
+
+
+
+  
+#footer-body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --background: #023047;
+    --accent: #A7C957;
+        font-family: 'Segoe UI', sans-serif;
+}
+footer h3 {
+    color: var(--accent);
+    font-size: 22px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer {
+    padding: 5rem;
+    background-color: var(--background);
+    display: flex;
+    gap: 2rem;
+}
+
+footer > * {
+    width: 33%;
+}
+
+.upper-portion {
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.upper-portion > * {
+    width: 50%;
+}
+
+.lower-portion {
+    width: 100%;
+}
+.blogsspan{
+    width: 124px;
+height: 38px;
+left: 80px;
+top: 72px;
+
+background: rgba(2, 48, 71, 0.2);
+}
+.buttonsustain{
+    width: 240px;
+/* height: 56px; */
+    background: #A7C957;
+border-radius: 4px;
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+display: flex;
+/* align-items: center; */
+text-align: center;
+
+color: #023047;
+
+}
+.card-text{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: rgba(19, 19, 19, 0.8);
+}
+.card-title{
+    /* width: 100%; */
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 29px;
+display: flex;
+align-items: center;
+
+color: #023047;
+   }
+.mediaparagraphheading { 
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 43px;
+display: flex;
+align-items: center;
+
+color: #023047;
+
+}
+
+.lower-portion a, .links a {
+    display: block;
+    margin: 1rem auto;
+}
+
+.lower-portion a {
+    color: var(--accent);
+}
+
+.center {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.center a {
+    color: var(--accent);
+    margin-right: 1.5rem;
+}
+
+::placeholder {
+    font-size: 16px;
+        font-family: 'Segoe UI', sans-serif;
+}
+
+/* .right > *{
+    margin: 1em auto;
+}
+
+.right form > * {
+    margin-bottom: 1rem;
+} */
+.Professionalism
+{
+    font-style: normal;
+font-weight: 600;
+font-size: 18px;
+}
+.Professionalismimages{
+background: url(../);
+}
+.mission
+{
+        font-family: 'Segoe UI', sans-serif;
+    background-color: rgba(2, 48, 71, 0.2);
+    color: #023047;
+    font-weight: bold;
+}
+.mission-ourteam{
+    background-color: rgba(2, 48, 71, 0.2);
+    color: #023047;
+    /* font-weight: bold; */
+    font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+    font-family: 'Segoe UI', sans-serif;
+}
+.paddingfromleft{
+    padding-left: 180px !important;
+    color: #023047;
+}
+.headingofsust{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+
+color: #023047;
+
+}
+.loremsustaibility{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: #023047;
+
+}
+.ourgolesrespo{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 43px;
+display: flex;
+align-items: center;
+
+color: #023047;
+}
+.mission-main
+{
+        font-family: 'Segoe UI', sans-serif;
+    background-color: #A7C957;
+    position: relative;
+    left: 140px;
+}
+
+.vision-main
+{
+    background-color: #A7C957;
+    position: relative;
+    right: 140px;
+}
+
+.paragraph-lorem{
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+font-weight: 400;
+font-size: 14px;
+color: rgba(19, 19, 19, 0.8);
+}
+.paragraph-lorem-1{
+    font-weight: 600;
+font-size: 16px;
+}
+
+.white-font {
+    color: white;
+}
+
+input, button {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+}
+
+p.copyright {
+    text-align: center;
+    color:#fff;
+}
+
+.blogsbuttonreadmore {
+    /* background-color: var(--accent); */
+    border: none;
+        font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+display: flex;
+align-items: center;
+text-align: center;
+border-radius: 4px;
+color: #023047;
+}
+
+.post-footer{
+    padding: 2rem;
+    background-color: var(--background);
+}
+
+.divider {
+    height: 2px;
+    width: 60%;
+    background-color: var(--accent);
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.mail-icon {
+    position: absolute;
+    right: 10%;
+}
+
+.sideperagraphofbio{
+    text-align: left;
+}
+
+#fourpointsofbiogas{
+        color: black;
+}
+
+#biogas-2{
+    /* margin-top: 50px;   */
+    /* margin-left: 50px; */
+    padding: 10px;
+}
+
+.biogasenergysidetext{
+    width: 519px;
+    height: 124px;
+    left: 80px;
+    top: 3225px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    
+    color: rgba(19, 19, 19, 0.8);
+        }
+
+        .biogaswalepagekebootankeniche{
+            width: 518px;
+        height: 72px;
+        left: 732px;
+        top: 222px;
+        
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        
+        color: rgba(19, 19, 19, 0.8);
+        }
+
+        #mediafirstimage{
+            width: 100%;
+            height: 60vh;
+            background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/media2image1.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+          }
+          .mediapagefeatures{
+            width: 952px;
+            height: 72px;
+            left: 80px;
+            top: 164px;
+            
+                font-family: 'Segoe UI', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 85px;
+            display: flex;
+            align-items: center;
+            
+            color: #FFFFFF;
+        }
+        .mediafirstimage-about-paragraph{
+            width: 624px;
+height: 64px;
+left: 80px;
+top: 260px;
+
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+
+color: #FFFFFF;
+        }
+
+.clientdetails{
+    /* color: #FFFFFF; */
+}
+.projectdetailsfrompage{
+    margin-left: 25px;
+}
+
+
+#Sustainability{
+        width: 100%;
+        height: 60vh;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/sustainabilityimage1.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+}
+
+
+.sustainabilityheading{
+    width: 952px;
+    height: 72px;
+    left: 80px;
+    top: 164px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 85px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+}
+
+
+.sustainability-about-paragraph{
+    /* width: 624px;
+    height: 64px; */
+    /* left: 80px;
+    top: 260px; */
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: #FFFFFF;
+    
+}
+
+.backgrounfprojectdetails{
+background-color: #A7C957;
+}
+
+.biocngheading{
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 43px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+.sustmediaimages{
+    margin-top: 370px;
+}
+.mediasectionheading{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 85px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+.hero-about-paragraph{
+        font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+
+color: #FFFFFF;
+}
+.mediaspan{
+    width: 94px;
+height: 36px;
+left: 24px;
+top: 24px;
+
+background: rgba(2, 48, 71, 0.2);
+}
+.marginofphotos{
+    margin-top: 187px;
+    /* position: relative; */
+}
+.card{
+    border: none !important;
+}
+.biospan{
+        font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+/* display: flex; */
+align-items: center;
+/* text-align: center; */
+
+color: #023047;
+}
+/* media quries start from here/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (max-width: 768px) {
+    *
+    {
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .mediasectionheading{
+            font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 33px;
+line-height: 1.5;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+    }
+    .card-text{
+            font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: rgba(19, 19, 19, 0.8);
+    }
+    .hero-about-paragraph{
+            font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+/* line-height: 19px; */
+
+color: #FFFFFF;
+
+    }
+    .card-title{
+            font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 29px;
+display: flex;
+align-items: center;
+
+color: #023047;
+    }
+    .responsivepaddingsmedia{
+        padding: 21px !important;
+    }
+    .responsivepaddingnews{
+
+    }
+    .responsiveevents{
+        padding-bottom: 25px;
+            font-family: 'Segoe UI', sans-serif;
+        padding-left: 10px;
+        /* margin: 8px; */
+font-style: normal;
+font-weight: 600;
+font-size: 25px !important;
+line-height: 19px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #023047;
+    }
+    .mediaspan{
+        padding: 10px 5px 12px 8px;
+        width: 94px;
+    /* height: 36px; */
+    left: 24px;
+    /* top: 24px; */
+    font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+align-items: center;
+/* text-align: center; */
+
+color: #023047;
+
+    background: rgba(2, 48, 71, 0.2);
+    }
+    .aboutuspagelorempara {
+        width: 189px;
+    height: 130px;
+    left: 104px;
+    top: 36px;
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: rgba(19, 19, 19, 0.8);
+    }
+    .responsiveImageofMedia{
+        margin-top: 0px;
+    }
+    .mediapagespacing{
+        padding: 35px;
+    }
+
+   .alignmentleft{
+   }
+    .responsiveeventsss{
+        padding: 2px 5px 5px 2px;
+    }
+    .headingoverview {
+        font-size: 25px !important;
+    }
+    .projectdetailsfrompage{
+        margin-left: 0px;
+    }
+
+.projectspan {
+    
+    font-size: 27px !important;
+    padding: 2px;
+}
+.projectHeading {
+    font-size: 25px;
+    margin-top: -28px;
+}
+.greenparagraphbiopaspage {
+    font-size: 18px;
+    text-align: left;
+}
+.overviewspan{
+    /* font-size: 28px; */
+    padding: 5px;
+}
+.projectdeatilsFrameImages{
+    width: 351px;
+}
+    .biogaswalepagekebootankeniche{
+        width: 348px;
+    }
+    
+    .contact_heading{
+        font-size: 25px !important;
+    }
+.sustainabilityheading{
+    font-size: 44px !important;
+}
+.sustainability-about-paragraph{
+    /* font-size: 14px; */
+    
+}
+.responsivesome{
+    padding: 5px;
+}
+.mission {
+    margin-left: 54px;
+    padding: 6px;
+        font-family: 'Segoe UI', sans-serif;
+}
+.responsiveImageofMedia{
+    width: 390px;
+}
+.paraheadingcng {
+   margin-left: 10px;
+}
+.card-body-padding{
+    margin-top: 12px;
+    /* padding: 0px !important; */
+}
+
+.Biocng{
+        padding: 6px;
+    margin: 59px;
+}
+.biocngheading{
+    padding-top: 7px !important;
+}
+    .aboutusparagraph{
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: #FFFFFF;
+    
+    }
+    .indiaMAP{
+        width: 533px;
+height: 587px;
+left: 80px;
+top: 0px;
+    }
+    .biogasconatiner{
+        padding: 2px;
+    }
+    .headingenergy {
+        font-size: 25px;
+    }
+    .cardsImagesPadding{
+        padding: 5px 3px 3px 3px;
+    }
+ .biospan{
+
+    /* text-align: -webkit-auto; */
+    font-size: 34px !important;
+    /* margin-left: 73px; */
+    margin-top: 10px;
+
+ }
+    .biogasrespon{
+        margin-left: 12px;
+
+    }
+
+    .caption-background {
+        background: #A7C957;
+        position: relative;
+        min-width: 100%;
+        padding: 15px;
+    }
+
+
+    .aboutusloremheading{
+        width: 187px;
+    height: 20px;
+    left: 16px;
+    top: 52px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    
+    }
+    .borderaboutus{
+        box-sizing: border-box;
+    
+        /* position: absolute; */
+       margin: 40px 0px; 
+        border: 1px solid #A7C957;
+        border-radius: 4px;
+    }
+    .chooseheading{
+        width: 357px;
+    height: 179px;
+    left: 80px;
+    top: 270px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 14px;
+    line-height: 19px;
+    /* display: flex; */
+    align-items: center;
+    
+    color: rgba(19, 19, 19, 0.8);
+    
+    }
+    .renawable{
+            font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    /* display: flex; */
+    align-items: center;
+    
+    color: #131313;
+    }
+    .footercolorspan{
+        color: #A7C957;
+    }
+    #reqQuote{
+        background: #A7C957;
+        text-align:center;
+        padding: 5px;
+        color: #023047;
+        font-size: 18px;
+        position: fixed;
+        bottom: 0;
+        z-index: 99;
+    }
+    #mediafirstimage{
+        width: 100%;
+        height: 60vh;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/mediaframe1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+      }
+      .mediapagefeatures{
+        width: 952px;
+        height: 72px;
+        left: 80px;
+        top: 164px;
+        
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 85px;
+        display: flex;
+        align-items: center;
+        
+        color: #FFFFFF;
+    }
+    .mediafirstimage-about-paragraph{
+        width: 624px;
+    height: 64px;
+    left: 80px;
+    top: 260px;
+    
+        font-family: 'Segoe UI', sans-serif;  
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: #FFFFFF;
+    }
+   
+    .heading{
+                        font-family: 'Segoe UI', sans-serif;
+            font-weight: 700;
+            font-size: 39px;
+            align-items: center;
+            color: #FFFFFF;
+        }
+        .email{
+            color: #A7C957;
+        }
+        #fluid-image{
+        width: 100%;
+        height: calc(100% / 2.41)
+        }
+        #logo{
+            max-height: 72px;
+            max-width: 222px; 
+            margin:40px 0px;       
+        }
+        .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl
+        {
+            justify-content: space-around  !important;
+        }
+
+        p.paragraph-lorem-2{
+            margin-top: 40px;
+            color:#000 !important;
+        }
+
+        .indexingcolumbs {
+            padding-left: 0px !important;
+            margin-top: 0px !important;
+        }
+.responsiveour{
+    padding: 10px;
+    margin-left: 14px;
+}
+        .social-icons i
+        {
+            padding:0 0 10px 10px;
+        }
+    .emergyspan{
+        padding: 10px;
+    }
+        #uppertext{
+            padding-top: 15px;
+            text-align: center;
+        }
+        #email{
+            text-align: center;
+            margin: auto;
+            font-family: Segoe;
+        }
+        #flex-conatiner1{
+            background: #FFFFFF;
+            text-align: center;
+        }
+        #navbar{
+    
+                font-family: 'Segoe UI', sans-serif;
+    
+        font-size: 1rem;
+    
+        margin-left: 30px;
+        }
+        .resposnveheadingsust{
+            margin-left: 14px !important;
+        }
+        .projectHeading {
+            /* text-align: start !important; */
+            /* font-size: 24px !important; */
+        }
+        .navbarOne{
+            /* margin-left: 30px !important; */
+            /* font-weight: 600 !important; */
+            color: black;
+                font-family: 'Segoe UI', sans-serif;
+        }
+        a.nav-link.active {
+            color:#A7C957;
+        }
+    
+        .nav-link:focus, .nav-link:hover {
+            color: #A7C957;
+        }
+        .ourValueBagroundColor {
+            background: #A7C957;
+        }
+        .our-value{
+                font-family: 'Segoe UI', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 32px;
+                color: #023047;
+        }
+        .secondimage{
+            width: 100%;
+            height: auto;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://gremedia.sgp1.digitaloceanspaces.com/media/Frame2.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .welcome{
+                font-family: 'Segoe UI', sans-serif;
+            font-weight: 600;
+            font-size: 29px;
+            color: #FFFFFF;
+        }
+        .logowhiteplant{
+            /* /* width: 72px; */
+    height: 72px; 
+    /* left: 80px;
+    top: 374px; */
+    color: #FFFFFF;
+    
+    /* background: url(); */
+        }
+        .spacemarigin{
+            margin-left: 12px;
+        }
+        .loremsustaibility{
+                font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
+        
+        color: #023047;
+        
+        }
+        .fulidbutton{
+            width: 240px;
+            height: 72px;
+            left: 464px;
+            top: 374px;
+            background: #A7C957;
+            border-radius: 4px;
+        }
+        .color-light{
+            color:#FFFFFF;
+        }
+        .icons{
+            color: #A7C957;
+            margin-right: 2px;
+        }
+        .bussection{
+        width: 100%;
+        height: calc(100%/2.41);
+        }
+        .indexingcolumbs{
+            padding-left: 80px;
+    
+        }
+        .years{
+            /* padding: 60px; */
+            /* margin-left: 80px !important; */
+        background: #A7C957;
+        border-radius: 2px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .homepageparagraph{
+            width: 663px;
+    height: 120px;
+    left: 32px;
+    top: 90px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: rgba(19, 19, 19, 0.8);
+    
+        }
+        .yearSize{
+            /* width: 146px;
+            height: 41px; */
+    
+            
+                font-family: 'Segoe UI', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            /* line-height: 53px; */
+            /* display: flex; */
+            /* align-items: center; */
+            /* text-align: center; */
+            
+            color: #023047;
+        }
+        .color{
+            color: rgba(19, 19, 19, 0.8) !important;
+        }
+        .indexing{
+            margin-top: -20px;
+        }
+        .utlization{
+            border: 0px solid black;
+            background-color: #FFFFFF;
+            /* padding: 40px; */
+            box-shadow: 5px 10px 8px gray;
+        }
+        .renewable{
+            font-size: 2rem;
+            font-weight: bolder;   
+        }
+        .aboutus{
+            margin-left: -240px;
+        }
+        #aboutus{
+            /* margin-left: -287px; */
+            border: 2px solid black;
+            background: rgba(2, 48, 71, 0.2);
+            text-align: left;
+            /* border: 0px solid  rgba(2, 48, 71, 0.2); */
+        }
+        .lorem{
+            margin-left: 40px;
+            text-align: left;
+        }
+        .fontlorem{
+            /* position: absolute; */
+    
+    
+                            font-family: 'Segoe UI', sans-serif;
+    
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+    
+                color: #023047;
+        }
+        .reqquo{
+            padding: 20px 40px 20px 40px !important;
+            background: #023047 !important;
+        border-radius: 4px !important;
+        }
+    
+        .checkbutton{
+            color: #A7C957;
+        }
+        .space{
+            margin-left: 5px;
+        }
+        .imagesonimages{
+            margin-bottom: 20px;
+        }
+        .button{
+            /* margin-left: -276px; */
+            background: rgba(2, 48, 71, 0.2) !important;
+            /* border: 0px solid  rgba(2, 48, 71, 0.2); */
+        }
+        .ourtextheading{
+                font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    
+    color: #023047;
+        }
+        .infofont{
+            width: 146px;
+            height: 26px;
+            left: 187px;
+            top: 141px;
+            
+                font-family: 'Segoe UI', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            
+            color: #023047;
+            
+        }
+        .chooseheading{
+            width: 173px;
+            /* font-weight: 600; */
+            font-size: 35px;
+    height: 38px;
+    
+    
+    background: rgba(2, 48, 71, 0.2);
+        }
+    .headingbettersource{
+    
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    /* display: flex; */
+    align-items: center;
+    color: #023047;
+    }
+    .whywechoos-para{
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    
+    color: rgba(19, 19, 19, 0.8);
+    }
+        .betterSource{
+            font-size: 2rem;
+            font-weight: bolder;
+        }
+        .top-section-heading-break{
+        border: 2px solid #A7C957;
+        opacity: 1 !important;
+        }
+        .headingenergy{
+
+            font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    width: 100%;
+    font-size: 32px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    
+    color: #023047;
+    
+        }
+        .photos{
+            
+        margin-top: 184px;
+    
+        }
+        .biogaspara{
+    width: 100%;
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    
+    color: rgba(19, 19, 19, 0.8);
+        }
+        .biospan{
+            width: 124px;
+            height: 38px;
+            left: 80px;
+        
+            top: 3043px;
+            background: rgba(2, 48, 71, 0.2);
+                font-family: 'Segoe UI', sans-serif;
+            /* font-style: normal; */
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+            /* display: flex; */
+            align-items: center;
+            text-align: left;
+            
+            color: #023047;        
+    background: rgba(2, 48, 71, 0.2);
+        }
+    
+        .biogasbutton{
+            width: 240px;
+    height: 72px;
+        font-family: 'Segoe UI', sans-serif;
+    border-radius: 4px;
+    background-color: #023047;
+    ;
+    /* width: 110px; */
+    /* height: 20px; */
+    /* left: 53px; */
+    /* top: 26px; */
+    
+    /*     font-family: 'Segoe UI', sans-serif; */
+    /* font-style: normal; */
+    font-weight: 600;
+    font-size: 16px;
+    /* line-height: 21px; */
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+        }
+        .responsivegole{
+            /* padding: 15px; */
+            margin-left: 10px;
+        }
+        .sustainbuttonblue{
+            margin: 49px;
+        }
+        .startingpadding{
+            padding: 21px;
+        }
+        .card-img-top{
+            margin-top: 12px;
+        }
+        .card-body {
+            /* flex: 1 1 auto; */
+            padding: 0px !important;
+            /* color: var(--bs-card-color); */
+        }
+        .sustainabiltygreenfieldsecond{
+            padding-right: calc(var(--bs-gutter-x) * .0) !important;
+            padding-left: calc(var(--bs-gutter-x) * .0) !important;
+        }
+        .paddingfromleft {
+            padding-left: 0px !important;
+            color: #023047;
+        }
+        .sustainabiltygreenfield{
+            padding-right: calc(var(--bs-gutter-x) * .0) !important;
+            padding-left: calc(var(--bs-gutter-x) * .0) !important;
+        }
+        .responsivesustain{
+            padding: 13px;
+        }
+        .responsivesomes {
+            /* padding: 5px; */
+            padding-right: calc(var(--bs-gutter-x) * .5); 
+  padding-left: calc(var(--bs-gutter-x) * .5);
+        }
+    .responsivesomestatics{
+        padding: 10px !important;
+    }
+        .lorems{
+            text-align: left;
+        }
+        .leftbutton{
+            margin-left: -530px;
+        }
+        .colorreq{
+            background: #A7C957;
+        border-radius: 4px !important;
+        }
+        .border-colorofhomepage{
+            box-sizing: border-box;
+    
+            /* position: absolute; */
+           
+            
+            background: #FFFFFF;
+            border: 1px solid #A7C957;
+            border-radius: 4px;
+        }
+        .homepagesgreenborderheader{
+                font-family: 'Segoe UI', sans-serif;
+    /* font-style: normal; */
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    
+    color: #023047;
+        }
+        .border-colorofhomepagenbiogas{
+            /* box-sizing: border-box; */
+    
+    /* position: absolute; */
+  
+    
+    background: #FFFFFF;
+    border: 1px solid #A7C957;
+    border-radius: 4px;
+        }
+        .greenborderallignment{
+            margin-top: 29px;
+            margin-left: 13px;
+        }
+        .homepagegreenborderparagraph{
+                font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: rgba(19, 19, 19, 0.8);
+        }
+        .border-colorofhomepage2{
+            box-sizing: border-box;
+    
+    position: absolute;
+    width: 270px;
+    height: 243px;
+    /* left: 1059px; */
+    /* top: 396px; */
+    
+    background: #FFFFFF;
+    border: 1px solid #A7C957;
+    border-radius: 4px;
+        }
+        .hero{
+            width: 100%;
+            height: auto;
+            background: linear-gradient(0deg, rgba(2, 48, 71, 0.95), rgba(2, 48, 71, 0.95)),
+            url(https://gremedia.sgp1.digitaloceanspaces.com/media/frame8.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .Biocng{
+            width: 124px;
+    height: 38px;
+    left: 772px;
+    top: 57px;
+        font-family: 'Segoe UI', sans-serif;
+    background: rgba(167, 201, 87, 0.2);
+    
+    width: 92px;
+    
+    top: 9px;
+    
+    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    
+    align-items: center;
+    text-align: center;
+    
+    color: #A7C957;
+        }
+        .biocngheading{
+   
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+        }
+        .dateblog{
+            margin: 38px !important;
+        }
+        .ritadesignation{
+            /* margin: 34px !important; */
+            /* padding-left: 15px; */
+            margin-left: 11px !important;
+        }
+        .paraheadingcng{
+   
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    /* display: flex; */
+    align-items: center;
+    
+    color: #FFFFFF;
+        }
+        .cngbutton{
+                font-family: 'Segoe UI', sans-serif;
+    /* font-style: normal; */
+    font-weight: 600;
+    font-size: 16px;
+    /* line-height: 21px; */
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    
+    color: #023047;
+            width: 240px;
+    height: 72px;
+    left: 772px;
+    top: 458px;
+    
+    background: #A7C957;
+    border-radius: 4px;
+        }
+        .projectspandeiv{
+            width: 124px;
+height: 38px;
+left: 658px;
+top: 40px;
+font-family: 31px !important;
+background: rgba(2, 48, 71, 0.2) !important;
+        }
+        .projectspan{
+            /* position: absolute; */
+            width: 124px;
+            height: 38px;
+            left: 658px;
+            top: 80px;
+            
+            background: rgba(2, 48, 71, 0.2);
+                font-family: 'Segoe UI', sans-serif;
+    /* font-style: normal; */
+    font-weight: 600;
+    font-size: 16px;
+    /* line-height: 21px; */
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    
+    color: #023047;
+        }
+    .projectHeading{
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 43px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #023047;
+        }
+
+       
+        .ourteamheading{
+
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    
+    color: #023047;
+    
+    /* color: #023047; */
+        }
+        .Biocngbutton{
+            background: #A7C957 !important;
+        border-radius: 4px !important;
+        }
+        .centerButton{
+            /* text-align: center !important ; */
+            margin-left: 260px !important ;
+        }
+        .ourteam{
+            margin-left: -190px;
+        }
+        .TESTIMONIALS{
+            margin-left: -600px;
+        }
+        .gettouch{
+            margin-left: -500px;
+        }
+        .formssubmission{
+            width: 688px;
+    height: 728px;
+    left: 672px;
+    top: 48px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+        }
+        .getintouchbackgroundcolor{
+            width: 672px;
+    height: 520px;
+    left: 0px;
+    top: 152px;
+    
+    background: #A7C957;
+        }
+        .caption-baground-indexing{
+            /* background: #A7C957; */
+            padding: 15px 20px 5px 20px;
+            /* position: absolute; */
+    width: 278px;
+    height: 80px;
+    /* left: 563px;
+    top: 384px; */
+    z-index: 1;
+    
+    background: #A7C957;
+    border-radius: 2px;
+        }
+        .caption-baground {
+            background: #A7C957;
+            margin-left: 0;
+            margin-top: 0;
+            position: relative;
+            min-width: 100%;
+            padding: 20px;
+        }
+        .getintouchspan{
+            /* width: 152px; */
+    background-color:rgba(2, 48, 71, 0.2);;
+    
+    left: 16px;
+    top: 9px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    /* line-height: 21px; */
+    /* display: flex; */
+    /* align-items: center;
+    text-align: center; */
+    
+    color: #023047;
+        }
+        .getintouchpara{
+            width: 570px;
+    height: 52px;
+    left: 80px;
+    top: 254px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    
+    color: rgba(19, 19, 19, 0.8);
+        }
+        .getcotact{
+            /* width: 490px; */
+    /* height: 56px;
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    /* display: flex; */
+    align-items: center;
+    color: #023047; 
+        }
+        /* .container-hight{} */
+        .gettouchpng{
+            /* position: absolute; */
+            width: 152px;
+            height: 38px;
+            left: 80px;
+            top: 80px;
+            
+            background: rgba(2, 48, 71, 0.2); 
+        }
+        .chatpng{
+            position: relative;
+        }
+        .radionames{
+            width: 24px;
+    height: 24px;
+    left: 36px;
+    top: 10px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    
+    color: rgba(19, 19, 19, 0.8);
+    
+        }
+        .formsubmittbuttin{
+            width: 580px;
+            height: 72px;
+            left: 54px;
+            top: 616px;
+            
+            background: #A7C957;
+            border-radius: 4px;
+        }
+        .radiobutton{
+            width: 24px;
+    height: 24px;
+    left: 0px;
+    top: 10px;
+    
+    background: #FFFFFF;
+    border: 1px solid #A7C957;
+    border-radius: 24px;
+        }
+        .getintouchheading{
+            width: 570px;
+    height: 88px;
+    left: 80px;
+    top: 150px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    
+    color: #023047;
+        }
+        .mediaparagraphheading{
+            /* padding-left: auto; */
+            font-size: 32px;
+        }
+        .card-title{
+         /* width: 100%; */
+             font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 29px;
+display: flex;
+align-items: center;
+
+color: #023047;
+        }
+        .text-block-ryt-img {
+            background: #A7C957;
+            height: 191px;
+            width: 408px;
+            position: relative;
+        }
+        .text-block-left-img {
+            background: #A7C957;
+            height: 191px;
+            width: 408px;
+            position: relative;
+        }
+        .greenparagraphbiopaspage{
+            /* width: 848px;
+    height: 112px; */
+    left: 297px;
+    top: 270px;
+    
+    background: #A7C957;
+    border-radius: 2px;
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+        }
+        .biogasemergencyparagraph{
+                font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: #023047;
+    
+        }
+        .bioemergencyheading{
+                font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    
+    color: #023047;
+        }
+        .biogaspageparagraph{
+            /* width: 485px; */
+    /* height: 44px; */
+    /* left: 875px;
+    top: 150px; */
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: #023047;
+        }
+        .project-details-from{
+            margin: auto;
+            background: #A7C957;
+            border-radius: 2px;
+        }
+        .getintouchbackgroundcolor{
+            /* width: 672px; */
+    /* height: 520px; */
+    /* background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/conatctpage.jpg); */
+    /* margin-left: auto; */
+    background: #A7C957;
+    color: #023047;
+        }
+        .getintouchbackgroundcolor p{
+    color: #023047;
+        }
+
+    .biogaspageheading{
+        width: 244px;
+    height: 24px;
+    left: 875px;
+    top: 110px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    /* display: flex; */
+    align-items: center;
+    
+    color: #023047;
+    }
+    .gallaryimagesimage{
+        position: absolute;
+    width: 628px;
+    height: 628px;
+    left: 80px;
+    top: 230px;
+    }
+        .indiaMAP{
+            width: 533px;
+    height: 587px;
+    left: 80px;
+    top: 0px;
+        }
+    /* Sandeep Code Ends */
+    
+    #frame-1{
+        /* border: 2px solid black; */
+        margin: 0px;
+        padding: 0px;
+    }
+    .fourImages{
+        padding-left: 33px;
+        padding-right: 40px;
+        padding-top: 38px;
+        padding-bottom: 44px;
+    }
+    .img{
+        width:100%;
+        height: auto;
+    z-index: 0;
+    }
+    /* .text-over-img {
+        z-index:1;
+        font-size: 1.2em
+        margin-top: -100px;
+        } */
+        .centered-Images {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 470px;
+    
+                font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+          }
+          .containerImages{
+            position: relative;
+            text-align: center;
+            color: white;
+          }
+          .contactusackgroundcolor{
+            /* width: 598px; */
+    /* height: 600px; */
+    left: 842px;
+    top: 0px;
+    background: #A7C957;
+          }
+    #greenreq{
+        background: #A7C957; 
+    }
+    .aboutpagefooterparagraph{
+        color: #A7C957;
+    }
+    .conatctusparagraph{
+        width: 316px;
+    height: 72px;
+    left: 200px;
+    top: 168px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    
+    color: rgba(19, 19, 19, 0.8);
+    }
+    .ourofficeheader{
+        width: 172px;
+    height: 24px;
+    left: 200px;
+    top: 120px;
+    
+          font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    
+    
+    }
+     .icon{
+        margin: 10px;
+        color: green;
+         padding-left: 270px;
+    }
+    .pho{
+        margin: 10px;
+        color: green;
+        padding-left: 100px;  
+    }
+    /* .bioimages{
+        border: 2px solid red;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/biogas-picture.jpg);
+    } */
+    
+    .fac{
+        margin:2px;
+        padding-left: 20px;
+        
+
+    }
+    .navbarOne{
+        margin-left: 0px !important;
+        font-weight: 600 !important;
+        color: black;
+            font-family: 'Segoe UI', sans-serif;
+    }
+    
+    .twi{
+        margin: 2px;
+        
+    }
+    
+    .ins{
+        margin: 2px;
+    }
+    
+    .lin{
+        margin: 2px;
+        
+    } 
+    
+     /* .req{
+        background-color: #0aaa07fa;
+        height: 40% !important;
+        padding: 50px;
+    
+    }
+    .navbar{
+        height: 0% !important;
+            padding-top: .0rem !important;
+        padding-bottom: .0rem !important;
+    }
+    
+    .icon1{
+        margin-left: 14% !important;
+        margin-right: -14% !important;
+    }
+    
+    .nav{
+        justify-content: center;
+    } */
+    .img-fluid{
+        width: 100%;
+        height: calc(100% / 2.41);
+    }
+    
+    #reqQuote{
+    /* margin-right: 10px; */
+    }
+    footer {
+        padding: 5rem;
+        background-color: var(--background);
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+    }
+    /* *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    } */
+    .heading-frame-third{
+            font-family: 'Segoe UI', sans-serif;
+        /* width: 368px; */
+        height: 88px;
+        left: 80px;
+        /* top: 158px; */
+        
+        /*     font-family: 'Segoe UI', sans-serif; */
+        /* font-style: normal; */
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 43px;
+        /* display: flex; */
+        align-items: center;
+        
+        color: #023047;
+        
+    }
+    a{
+        text-decoration: none;
+    
+    }
+    
+    .howwefunction{
+            font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    
+    
+    background: rgba(167, 201, 87, 0.2);
+    color: #A7C957;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    
+    /* gallery detail */
+    .gallerydetail{
+        /* position: absolute; */
+    width: 124px;
+    height: 38px;
+    left: 658px;
+    top: 64px;
+    
+    background: rgba(2, 48, 71, 0.2);
+    
+    }
+    
+    #gallerydetailbio{
+        width: 368px;
+    height: 40px;
+    left: 536px;
+    top: 134px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #023047;
+    }
+    
+    .gallerydetailimage{
+        width: 628px;
+    height: 628px;
+    left: 80px;
+    top: 230px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+    
+    .gallerydetailimage1{
+        width: 628px;
+    height: 628px;
+    left: 80px;
+    top: 230px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    }
+    
+    
+    #hero{
+        width: 100%;
+        height: 60vh;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/banner-image-about.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+    }
+    
+    #hero h1{
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+        color: white;
+        margin: 0 0 10px 0;
+    }
+    #hero p{
+        color: white;
+        margin-bottom: 40px;
+        font-size: 12px;
+        font-weight: 400  
+    }
+    
+    #frame-2 p
+    {
+        color: #000;
+    }
+
+    .vision-main p
+    {
+        color:#023047;
+    }
+
+    .mission-main p
+    {
+        color: #023047;
+    }
+
+    #section-loyality p{
+        
+        color:#000000;
+    }
+
+    #section-loyality h6{
+        color:#000000;
+    }
+
+
+    #van{
+        height: 500px;
+        width: 400px;
+        margin-top: 10px;  
+        
+    }
+    
+    #frame-2{
+        /* margin-top: 50px;   */
+        /* margin-left: 50px; */
+        padding: 30px;
+    }
+    
+    #text{
+        margin-top: 50px;
+    padding-right: 10f0px;
+    }
+    
+    /* .check{
+        margin-top: 50px;
+        color: #A7C957;
+        letter-spacing: 0.9;
+    } */
+    
+    #sign {
+        /* margin: 10px; */
+        color: #A7C957;
+        letter-spacing: 0.5;
+        
+    }
+    #kuchbhidedo{
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        /* display: flex; */
+        align-items: center;
+        
+        color: #000000;
+    
+    }
+    .addYourTextHeading{
+        /* font-style: normal; */
+            font-family: 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color:#023047;
+    font-weight: bolder;
+    
+    }
+    
+    .girishBansal-heading{
+            font-family: 'Segoe UI', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+    
+        color: #023047;
+    }
+    .Designation{
+            font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #023047;
+    }
+    .caption-baground{
+        background: #A7C957;
+        /* padding: ; */
+    }
+    
+    button{
+        margin-top: 50px;
+        background-color: #557803;
+        color: #557803;
+    }
+    .our-values-section{
+        /* margin-left: 270px; */
+            font-family: 'Segoe UI', sans-serif;
+        background: #A7C957;
+        padding-bottom: 0px;
+    }
+    .para{
+        margin-top: 150px; 
+        
+        background-color: #A7C957;
+        margin-left: 250px;
+        padding-left: 50px;
+        /* width: 80%; */
+    } 
+    .responsive {
+        width: 100%;
+        height: auto;
+      }
+    .para button{
+        color: black;
+        background-color: #557803;
+        border-radius: none;
+        border: #557803;
+        margin-top: 30px;
+        z-index: 1;
+        
+    }
+    .para p{
+        margin-top: 20px;
+        padding-bottom: 30px;
+    }
+    
+    .images{
+        margin-top: 50px;
+    }
+    
+    /* container{
+        margin-top: 30px;
+        
+        
+    <<<<<<< HEAD
+    }  */
+    
+    
+    .container-button{
+    
+        background-color: #557803;
+        color: black;
+        margin-left: 30px;
+        
+    }
+ 
+    .container h2{
+        /* margin-top: 30px;
+        margin-left: 30px;
+        padding-bottom: 10px; */
+    }
+    
+    .col{
+        /* margin-left: 10px; */
+        /* background-color:#A7C957;
+        padding-bottom: 30px; */
+    }
+    
+    /* .container p{
+        margin-left: 30px;
+        margin-right: 30px;
+        
+    } */
+    .imgframe4{
+        /* height: 100%; */
+    }
+    /* .container-img{
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+    } */
+    .border{
+        /* height: ; */
+        /* margin-top: 60px; */
+        /* border: 2px solid rgb(149, 255, 0); */
+    }
+    .divconat{
+        margin-left: 120px !important;
+        /* border: 2px solid black; */
+        height: 260px;
+        width: 550px;
+        margin-top: 80px;
+        /* z-index: -10 !important; */
+        /* margin-left: 200px; */
+        background-color: green;
+    }
+    .imagesmountain{
+        margin-left: 605px;
+        margin-top: -340px;
+        /* z-index: -1 !important; */
+    }
+    #fra{
+        margin-left: 80px;
+    }
+    .funcationateSection{
+        text-align: left;
+    }
+    .zero{
+        background: linear-gradient(0deg, rgba(2, 48, 71, 0.95), rgba(2, 48, 71, 0.95)),url(About.jpeg);
+    }
+    
+    .utlization p
+    {
+        color:#000 !important;
+    }
+
+    .utlization h5
+    {
+        color:#000 !important;
+    }
+
+
+    .biogaspara p
+    {
+        color:#000 !important;
+    }
+
+    .form-label
+    {
+        color:#000 !important;
+    }
+
+    .form-check-label
+    {
+        color:#000 !important;
+    }
+
+    .Sustainability{
+        width: 100%;
+        height: auto;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/TREESSUS.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* padding: 60px ; */
+    }
+    .colorPrevious{
+        /* position: absolute; */
+    width: 164px;
+    height: 154px;
+    left: 0px;
+    top: 247px;
+    background: #A7C957;
+    }
+  
+    
+    .greeenblankfoam{
+    width: 410px;
+    height: 516px;
+    left: 881px;
+    top: 470px;
+    margin: auto;
+    background: #A7C957;
+    border-radius: 2px;
+    }
+    
+    .placeholderdetails{
+        width: 77px;
+    height: 24px;
+    left: 32px;
+    top: 131px;
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    
+    color: #023047;
+    
+    }
+    
+    
+    .placeholderdetails2 {
+        width: 77px;
+        height: 24px;
+        left: 32px;
+        top: 131px;
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        
+        color: #023047;
+        
+    
+    }
+    
+    .aboutusloremheadings{
+        width: 187px;
+    height: 20px;
+    left: 16px;
+    top: 52px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    
+    color: #023047;
+    
+    }
+    
+    
+    .Sustainabilitytext{
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        /* display: flex; */
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        padding-top: 30%;
+    }
+    .Sustainabilitybutton{
+        width: 240px;
+        height: 56px;
+        left: 600px;
+        top: 334px;
+        
+        background: #A7C957;
+        border-radius: 4px;
+    }
+    .treesustainable{
+        width: 100%;
+        height: 100%;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/TREE.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    /* #cen h2{
+        align-items: center;
+        color: white;
+         margin-left: 630px;
+    } */
+    
+    /* #cen button{
+        align-items: center;
+        color: black;
+    background: #A7C957;
+    border-radius: 4px;
+    } */
+    
+    .container1{
+        margin-top: 50px;
+    }
+    
+    
+    .container1 img{
+        width: 500px;
+        height: 200px;
+        margin-left: 100px;
+        padding-left: 200px;
+    }
+    
+    .container1 p{
+        margin-right: 100px;
+        padding-right: 200px;
+    }
+    
+    .container2 img{
+        width: 250px;
+        height: 250px;
+         margin-left: 80px;
+        /* margin-right: 50px; */  
+    }
+    .viewmorebutton{
+        width: 240px;
+    height: 72px;
+    left: 600px;
+    top: 1488px;
+    
+    background: #A7C957;
+    border-radius: 4px;
+    /* font-style: normal; */
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    /* display: flex; */
+    align-items: center;
+    /* text-align: center; */
+    
+    color: #023047;
+    }
+    #herobiogas{
+        width: 100%;
+        height: 60vh;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/bioimage1.png);
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color:white;
+        
+    }
+    
+    .ourprojectparagraph{
+        width: 100%;
+   
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    /* font-weight: 600; */
+    font-size: 18px;
+    line-height: 24px;
+    /* display: flex; */
+    align-items: center;
+    
+    color: #FFFFFF;
+    }
+    .ourprojectparagraph {
+        text-align: left !important;
+        margin-left: 10px !important;
+        font-family: 'Segoe UI', sans-serif !important;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+    }
+    .exploremorebutton {
+            font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #023047;
+    }
+    .card-body{
+      
+    
+            border: 0px solid #FFFFFF;
+    
+    }
+    .background{
+        background-color: #FFFFFF;
+    }
+    .exploremorebutton{
+        position: absolute;
+        width: 240px;
+        height: 56px;
+        left: 16px;
+        font-weight: 600;
+        top: 137px;
+        color: #023047;
+        background: #A7C957;
+        border-radius: 4px;
+    }
+    .containerImages {
+        /* position: relative; */
+        width: 100%;
+        margin:auto;
+      }
+      
+      .containerImages img {vertical-align: middle;}
+      
+      .containerImages .contentParagraph {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        text-align: left;
+        bottom: 0;
+        background: rgba(2, 48, 71, 0.7);
+    }
+        #hero-our-project{
+            width: 100%;
+            height: 60vh;
+            background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/our-project-frame.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    
+        #hero-our-project h1{
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 56px;
+            color: white;
+             margin: 0 0 10px 0; 
+           text-align: left;
+        }
+    
+        #hero-our-project p{
+            color: white;
+            margin-bottom: 40px;
+            font-size: 12px;
+            font-weight: 400;
+            margin-left: 10px;
+            text-align: left;  
+        }
+    
+    
+    .bayehojaa{
+        text-align: left;
+    }
+    
+    
+    #Blogs{
+        width: 100%;
+        height: 60vh;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/Blogs.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+    
+    #Blogs h1{
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+        color: white;
+         margin: 0 0 10px 0; 
+       text-align: left;
+    
+    }
+    
+    #Blogs p{
+        color: white;
+        margin-bottom: 40px;
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: 0px;
+        text-align: left;
+        
+    }
+    .navs{
+        margin-left: 30px;
+        margin-top: 30px;
+        color: #000000 !important;
+        
+    }
+    
+    
+    .card{
+        margin-left: 50px;
+        margin-right: 50px;
+        border: none;
+    }
+    .aboutsbutton{
+        width: 240px;
+    height: 72px;
+    left: 80px;
+    top: 489px;
+    color: #FFFFFF;
+    background: #023047;
+    border-radius: 4px;
+    }
+    
+    button {
+        background-color: var(--accent);
+        border: 1px solid #A7C957;
+            font-family: 'Segoe UI', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #A7C957;
+        color: black;
+         /* height: 30px; */
+        margin-top: 15px; 
+        /* text-align: center; */
+    }
+    
+    
+    #project{
+        width: 100%;
+        height: 60vh;
+        background: url();
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;  
+    }
+    
+    .details-image{
+        /* margin-left: 150px; */
+        justify-content: center;
+        text-align: center;
+    }
+    .overviewspan{
+        width: 124px;
+    height: 38px;
+    left: 190px;
+    top: 550px;
+    
+    background: rgba(2, 48, 71, 0.2);
+    }
+    .headingoverview{
+        /* width: 627px;
+    height: 132px; */
+    left: 190px;
+    top: 620px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    
+    color: #023047;
+    }
+    .overviewpara{
+        /* width: 626px;
+    height: 219px; */
+    left: 190px;
+    top: 776px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    /* display: flex; */
+    align-items: center;
+    
+    color: rgba(19, 19, 19, 0.8);
+    }
+    #project h1{
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+        color: white;
+         margin: 0 0 10px 0; 
+       text-align: left;
+    
+    }
+    
+    #project p{
+        color: white;
+        margin-bottom: 40px;
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: 10px;
+        text-align: left;  
+    }
+    
+    #projects button{
+        text-align: center;
+        
+    }
+    
+    
+    
+      .text-center-button{
+        /* background: rgba(2, 48, 71, 0.2); */
+        color: #023047;
+        border-radius: none;
+    
+        margin-top: 40px;
+          font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    height: 50px;
+    width: 100px;
+    
+        /* margin-top: 40px; */
+    
+        
+      }
+    
+      /* .text-center{
+          font-family: 'Segoe UI', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-align: center;
+      } */
+    
+      #frame-4{
+        /* width: 411px;
+        height: 529px;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/Supply.jpg);
+         background-position: left; 
+        background-size: cover;
+        background-repeat: no-repeat; */
+    
+      }
+    
+      #frame-4 img{
+        /* height: 100%; */
+        margin-left: 30px;
+      }
+    
+      #gallery-our-project{
+        width: 100%;
+        height: 60vh;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/Gallery.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    
+      #gallery-our-project h1{
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+        color: white;
+         margin: 0 0 10px 0; 
+       text-align: left;
+      }
+    
+      #gallery-our-project p{
+        color: white;
+        margin-bottom: 40px;
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: 10px;
+        text-align: left;  
+      }
+    
+      
+    .galleryparagraph{
+        /* width: 624px; */
+    /* height: 64px; */
+    /* left: 80px; */
+    /* top: 260px; */
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: #FFFFFF;
+    }
+    
+     .layout{
+         /* position: left;  
+    width: 628px;
+    height: 416px;
+    left: 50px;
+    top: 0;
+    margin-left: 30px;  */
+    
+    
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://gremedia.sgp1.digitaloceanspaces.com/media/bio2.jpeg); */
+    /* color: white;
+    text-align: center; */
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-left: 50px; 
+     margin-right: 50px; 
+    
+    
+      }
+     
+       .layout1{
+        position: left;  
+    width: 628px;
+    height: 416px;
+    left: 80px;
+    top: 0;
+    color: white;
+    text-align: center;
+    margin-left: 50px; 
+    
+    
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://gremedia.sgp1.digitaloceanspaces.com/media/Girls.jpeg); */
+    margin-top: 50px;
+     }
+    
+     .layout1 h2{
+        text-align: center;
+        margin-top: 300px;
+        padding-top: 100px;
+    
+     }
+    
+     .layout2{
+        position: left;  
+    width: 628px;
+    height: 416px;
+    left: 80px;
+    top: 0;
+    margin-left: 50px;
+    color: white;
+    text-align: center;
+    
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://gremedia.sgp1.digitaloceanspaces.com/media/Engin.jpeg); */
+     }
+    
+     .layout3{
+        position: left;  
+    width: 628px;
+    height: 416px;
+    left: 80px;
+    top: 0;
+    margin-left: 50px;
+    color: white;
+    text-align: center;
+    
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://gremedia.sgp1.digitaloceanspaces.com/media/onion.jpeg); */
+     }
+    
+     .contact_section{
+    width: 1440px;
+    height: 500px;
+        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/contact\ banner.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+     }
+    
+     .contact_heading{
+        width: 952px;
+    height: 72px;
+    left: 80px;
+    top: 164px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 85px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    
+     }
+    
+     .contact_paragraph{
+        /* width: 624px; */
+    /* height: 64px; */
+    left: 80px;
+    top: 260px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    /* font-weight: 600; */
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: #FFFFFF;
+     }
+    
+     
+    
+    
+    
+      
+   
+    ::placeholder {
+        font-size: 16px;
+            font-family: 'Segoe UI', sans-serif;
+    }
+    
+    /* .right > *{
+        margin: 1em auto;
+    }
+    
+    .right form > * {
+        margin-bottom: 1rem;
+    } */
+    .Professionalism
+    {
+        font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    }
+    .Professionalismimages{
+    background: url(../);
+    }
+    .mission
+    {
+        background-color: rgba(2, 48, 71, 0.2);
+        color: #023047;
+        font-weight: bold;
+    }
+    .mission-ourteam{
+        background-color: rgba(2, 48, 71, 0.2);
+        color: #023047;
+        /* font-weight: bold; */
+        font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    }
+    
+    .mission-main
+    {
+        background-color: #A7C957;
+        position: relative;
+        left: 0px;
+    }
+
+    .imgshow
+
+{
+    display: none;
+}
+    
+    .vision-main
+    {
+        background-color: #A7C957;
+        position: relative;
+        right: 0px;
+    }
+    
+    .paragraph-lorem{
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(19, 19, 19, 0.8);
+    }
+    .paragraph-lorem-1{
+        font-weight: 600;
+    font-size: 16px;
+    }
+    
+    .white-font {
+        color: white;
+    }
+    
+    input, button {
+        width: 100%;
+        max-width: 300px;
+        padding: 1rem;
+    }
+    
+    p.copyright {
+        text-align: center;
+        color:#fff;
+    }
+    
+    .blogsbuttonreadmore {
+        /* background-color: var(--accent); */
+        border: none;
+            font-family: 'Segoe UI', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .post-footer{
+        padding: 2rem;
+        background-color: var(--background);
+    }
+    
+    .divider {
+        height: 2px;
+        width: 60%;
+        background-color: var(--accent);
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    
+    .mail-icon {
+        position: absolute;
+        right: 10%;
+    }
+    
+    .sideperagraphofbio{
+        text-align: left;
+    }
+    
+    #fourpointsofbiogas{
+            color: black;
+    }
+    
+    #biogas-2{
+        /* margin-top: 50px;   */
+        /* margin-left: 50px; */
+        padding: 10px;
+    }
+    
+    .biogasenergysidetext{
+        width: 519px;
+        height: 124px;
+        left: 80px;
+        top: 3225px;
+        
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        
+        color: rgba(19, 19, 19, 0.8);
+            }
+    
+            .biogaswalepagekebootankeniche{
+                /* width: 518px; */
+            height: 72px;
+            left: 732px;
+            top: 222px;
+            
+                font-family: 'Segoe UI', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            
+            color: rgba(19, 19, 19, 0.8);
+            }
+    
+            #mediafirstimage{
+                width: 100%;
+                height: 60vh;
+                background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/media2image1.png);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                
+              }
+              .mediapagefeatures{
+                width: 952px;
+                height: 72px;
+                left: 80px;
+                top: 164px;
+                
+                    font-family: 'Segoe UI', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 64px;
+                line-height: 85px;
+                display: flex;
+                align-items: center;
+                
+                color: #FFFFFF;
+            }
+            .mediafirstimage-about-paragraph{
+                width: 624px;
+    height: 64px;
+    left: 80px;
+    top: 260px;
+    
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: #FFFFFF;
+            }
+    
+    
+    
+    
+    
+    #Sustainability{
+            width: 100%;
+            height: 60vh;
+            background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/sustainabilityimage1.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        
+    }
+    
+    
+    .sustainabilityheading{
+        width: 952px;
+        height: 72px;
+        left: 80px;
+        top: 164px;
+        
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 85px;
+        display: flex;
+        align-items: center;
+        
+        color: #FFFFFF;
+    }
+    
+    
+    .sustainability-about-paragraph{
+        /* width: 624px;
+        height: 64px; */
+        left: 80px;
+        top: 260px;
+        
+            font-family: 'Segoe UI', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        /* font-size: 14px; */
+        line-height: 19px;
+        
+        color: #FFFFFF;
+        
+    }
+    
+    .backgrounfprojectdetails{
+    background-color: #A7C957;
+    }
+    
+    .biocngheading{
+  
+        font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+    }
+    
+}
