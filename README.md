@@ -1,3 +1,3 @@
-click here to see the project live
+click here to watch the project live
 
 grunerrenewable-energy-372e4c.netlify.app
