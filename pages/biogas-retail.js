@@ -8,8 +8,8 @@ import { ReactMarkdown } from 'react-markdown/lib/react-markdown.js'
 
 export async function getServerSideProps() {
   const [operationsRes,bannerRes] = await Promise.all([
-    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/medias/?populate=*`),
-    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/media-banners/?populate=*`)
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/galleries/?populate=*`),
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/gallery-banners/?populate=*`)
     // fetch(`https://lobster-app-soz2y.ondigitalocean.app/api/ratings/?populate=*`)
 
     // fetch(`http://localhost:1337/api/services/?populate=*`),
@@ -40,8 +40,7 @@ export default function Home({operations,banner}) {
         </link>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"></link>
       </Head>
- {/* start here */}
- 
+
   {/* Navigation Starts */}
   <div className="container-fluid" id="flex-conatiner1">
     <div className="row ">
@@ -125,175 +124,10 @@ export default function Home({operations,banner}) {
           <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." className="float-whatsapp" target="_blank">
 <i className="fa fa-whatsapp my-float"></i>
 </a>
-          </div>
+    </div>
   </div>
   {/* Navigation Ends */}
-  {/* section start here */}
-  <div className="conatiner-fluid col-md-12 " />
-  {banner.data?.map( (row) => (
-  <section id="gallery-our-project" className="d-flex align-items-center">
-    <div className="container">
-      <h1 className="gallaryheading">{row?.attributes.banner_title}</h1>
-      <ReactMarkdown className="galleryparagraph">{row?.attributes.banner_description}</ReactMarkdown>
-    </div>
-  </section>
-   ))}
-  {/* section end here */}
-  {/* dropdown start here */}
-  {/* <div className="dropdown">
-  <button
-    className="btn btn- dropdown-toggle"
-    type="button"
-    id="dropdownMenu2"
-    data-bs-toggle="dropdown"
-    aria-expanded="false"
-  >
-    Year
-  </button>
-  <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li>
-      <button className="dropdown-item" type="button">
-        Action
-      </button>
-    </li>
-    <li>
-      <button className="dropdown-item" type="button">
-        Another action
-      </button>
-    </li>
-    <li>
-      <button className="dropdown-item" type="button">
-        Something else here
-      </button>
-    </li>
-  </ul>
-  <button
-    className="btn btn- dropdown-toggle"
-    type="button"
-    id="dropdownMenu2"
-    data-bs-toggle="dropdown"
-    aria-expanded="false"
-  >
-    Thematic
-  </button>
-  <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li>
-      <button className="dropdown-item" type="button">
-        Action
-      </button>
-    </li>
-    <li>
-      <button className="dropdown-item" type="button">
-        Another action
-      </button>
-    </li>
-    <li>
-      <button className="dropdown-item" type="button">
-        Something else here
-      </button>
-    </li>
-  </ul>
-</div> */}
-  {/* dropdown end here */}
-  {/* media page start from herer */}
-  {operations.data?.map( (row) => (
-  <div className=" p-lg-5">
-  <div className="row row-cols-2">
-    <div className="col-12 col-lg-6 mediapageimage1">
-      <img src={ row?.attributes.image1.data[0].attributes.url} />
-    <div className='text-block-ryt-img p-lg-5'>
-    <span className="mediaspan p-lg-2 ">News</span>
-    <ReactMarkdown className="mediaparagraphsecond p-5 p-lg-0 pt-lg-3">
-    {row?.attributes.description1}
-          </ReactMarkdown>
-    </div>
-    </div>
-    <div className="col-12 col-lg-6 ">
-      <div className="row row-cols-2 mediarowresponsive">
-        <div className="col-12 col-lg-6 pt-3  paddingstart">
-          <span className="mediaspan  p-lg-2 pt-3">Events</span>
-          <ReactMarkdown className="mediaparagraphsecond p-3 p-lg-0 pt-lg-3">
-          {row?.attributes.description2}
-          </ReactMarkdown>
-          {/* <img src="../images/media icon.png" className="p-3 p-lg-0 alignmentleft" /> */}
-        </div>
-        <div className="col-12 col-lg-6 ">
-          <img src={ row?.attributes.image2.data[0].attributes.url}className='mediapagespacing' />
-        </div>
-        <div className="col-12 col-lg-6">
-          <img src={ row?.attributes.image3.data[0].attributes.url} className='mediapagespacing'/>
-        </div>
-        <div className="col-12 col-lg-6 my-3  ">
-          <span className="mediaspan p-lg-2 pt-3 ">Events</span>
-          <ReactMarkdown className="mediaparagraphsecond p-3 p-lg-0 pt-lg-3">
-          {row?.attributes.description3}
-          </ReactMarkdown>
-          {/* <img src="../images/media icon.png" className="p-3 p-lg-0" /> */}
-        </div>
-      </div>
-    </div>
-    <div className="col-12 col-lg-6 pt-3">
-      <div className="row row-cols-2">
-        <div className="col-12 col-lg-6  ">
-          <span className="mediaspan p-lg-2 pt-3  ">Events</span>
-          <ReactMarkdown className="mediaparagraphsecond p-3 p-lg-0 pt-lg-3">
-          {row?.attributes.description4}
-          </ReactMarkdown>
-          {/* <img src="../images/media icon.png" className="p-3 p-lg-0" /> */}
-        </div>
-        <div className="col-12 col-lg-6">
-          <img src={ row?.attributes.image4.data[0].attributes.url} className='mediapagespacing'/>
-        </div>
-        <div className="col-12 col-lg-12">
-          {/* <div class="p-3"><span class="mediaspan p-lg-2">News</span></div>
-  <p class="mediaparagraphsecond">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> */}
-        </div>
-      </div>
-    </div>
-    <div className="col-12 col-lg-6 pt-lg-4 mediapagegapping">
-      <div className="text-start responsivepaddingnews">
-        <span className="mediaspan p-lg-2 ">News</span>
-      </div>
-      <ReactMarkdown className="mediaparagraphsecond p-3 p-lg-0 pt-lg-3">
-      {row?.attributes.description_9}
-      </ReactMarkdown>
-    </div>
-    <div className="col-12 col-lg-6 pt-3">
-      <div className="row row-cols-2">
-        <div className="col-12 col-lg-6">
-          <img src={ row?.attributes.image5.data[0].attributes.url} className='mediapagespacing'/>
-        </div>
-        <div className="col-12 col-lg-6 p-lg-3">
-          <span className="mediaspan p-lg-2 ">Events</span>
-          <ReactMarkdown className="mediaparagraphsecond p-3 p-lg-0 pt-lg-3">
-          {row?.attributes.description5}
-          </ReactMarkdown>
-          {/* <img src="../images/media icon.png" className="p-3 p-lg-0" /> */}
-        </div>
-        <div className="col-12 col-lg-12">
-          <div className="p-lg-0 pt-lg-4">
-            <span className="mediaspan p-lg-2 ">News</span>
-          </div>
-          <ReactMarkdown className="mediaparagraphsecond p-3 p-lg-0 pt-lg-3">
-          {row?.attributes.description_7}
-          </ReactMarkdown>
-        </div>
-      </div>
-    </div>
-    <div className="col-12 col-lg-6 mediapage2">
-      <img src={ row?.attributes.image6.data[0].attributes.url} />
-      <div className='text-block-left-img p-lg-5'>
-    <span className="mediaspan p-lg-2 ">News</span>
-    <ReactMarkdown className="mediaparagraphsecond p-3 p-lg-0 pt-lg-3">
-    {row?.attributes.description6}
-          </ReactMarkdown>
-    </div>
-    </div>
-  </div>
-</div>
-  ))}
-  {/* media page end here */}
- 
+
 {/* Footer Ends here */}
 <div className="container-fluid pt-lg-5" id="footer-body">
             <footer>
@@ -397,7 +231,7 @@ export default function Home({operations,banner}) {
               <p className="copyright">©2022 grunerrenewable.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All Rights Reserved.</p>
             </div>
           </div>
-{/* footer end here */}
+ {/* end here */}
       <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
       </script>

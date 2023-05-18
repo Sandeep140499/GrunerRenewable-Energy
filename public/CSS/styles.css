@@ -2,11 +2,25 @@
 *
 {
     font-family: 'Segoe UI', sans-serif;
-}.
+}
+.float-whatsapp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+  font-size:30px;
+    box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
 
-/* body{
-    background-color: white !important;
-} */
+.my-float{
+    margin-top:16px;
+}
 .aboutuspagelorempara {
     width: 189px;
 height: 130px;
@@ -130,9 +144,7 @@ line-height: 19px;
 
 color: #FFFFFF;
 }
-.mediaengg{
 
-}
 .heading{
                     font-family: 'Segoe UI', sans-serif;
         font-weight: 700;
@@ -180,7 +192,7 @@ color: #FFFFFF;
     }
     
     .navbarOne{
-        margin-left: 30px;
+        margin-left: 20px;
         font-weight: 600 !important;
         color: black;
             font-family: 'Segoe UI', sans-serif;
@@ -239,8 +251,20 @@ color: #FFFFFF;
         color:#FFFFFF;
     }
     .icons{
-        color: #A7C957;
+        /* color: #A7C957; */
         margin-right: 2px;
+    }
+    .colourFb{
+        color: #39569c;
+    }
+    .colourtwitter{
+        color: #26a7de;
+    }
+    .colourInstagram{
+        color: #d62976;
+    }
+    .colourlinkdin{
+        color: #0A66C2;
     }
     .bussection{
     width: 100%;
@@ -839,6 +863,10 @@ align-items: center;
 color: rgba(19, 19, 19, 0.8);
 
     }
+    .startpadding{
+        padding: 23px;
+        padding-top: 149px;
+    }
     .formsubmittbuttin{
         width: 580px;
         height: 72px;
@@ -884,6 +912,25 @@ background: #FFFFFF;
 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 border-radius: 4px;
     }
+    .sluggallery{
+
+font-family: 'Segoe UI', sans-serif;
+/* font-style: normal; */
+font-weight: 600;
+font-size: 16px;
+/* line-height: 21px; */
+/* display: flex; */
+/* align-items: center; */
+/* text-align: center; */
+padding: 9px;
+color: #023047;
+
+background: rgba(2, 48, 71, 0.2);
+    }
+    .renewablearrow{
+        color: 
+#A7C957;
+    }
     .greenparagraphbiopaspage{
         /* width: 848px;
 height: 112px; */
@@ -912,7 +959,8 @@ color: #023047;
 
     }
     .imageindex{
-        z-index: -1;
+        /* z-index: -1; */
+        position: relative;
     }
     .sustainbuttonblue{
         width: 240px;
@@ -1115,40 +1163,11 @@ align-items: center;
     
 } 
 
- /* .req{
-    background-color: #0aaa07fa;
-    height: 40% !important;
-    padding: 50px;
-
-}
-.navbar{
-    height: 0% !important;
-        padding-top: .0rem !important;
-    padding-bottom: .0rem !important;
-}
-
-.icon1{
-    margin-left: 14% !important;
-    margin-right: -14% !important;
-}
-
-.nav{
-    justify-content: center;
-} */
+ 
 .img-fluid{
     width: 100%;
     height: calc(100% / 2.41);
 }
-
-#reqQuote{
-/* margin-right: 10px; */
-}
-
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
 .heading-frame-third{
         font-family: 'Segoe UI', sans-serif;
     font-weight: 700;
@@ -1241,7 +1260,7 @@ margin-left: 30px;
 #hero{
     width: 100%;
     height: 60vh;
-    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/banner-image-about.jpeg);
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/aboutusorg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1425,10 +1444,6 @@ color: #023047;
     min-width: 294px;
     padding: 15px;
 }
-.navbarOne{
-    /* margin-left: 0px; */
-}
-
 button{
     margin-top: 50px;
     background-color: #557803;
@@ -1497,36 +1512,6 @@ button{
     
     color: #FFFFFF;
 }
-.container h2{
-    /* margin-top: 30px;
-    margin-left: 30px;
-    padding-bottom: 10px; */
-}
-
-.col{
-    /* margin-left: 10px; */
-    /* background-color:#A7C957;
-    padding-bottom: 30px; */
-}
-
-/* .container p{
-    margin-left: 30px;
-    margin-right: 30px;
-    
-} */
-.imgframe4{
-    /* height: 100%; */
-}
-/* .container-img{
-    height: 50px;
-    width: 50px;
-    margin-left: 10px;
-} */
-.border{
-    /* height: ; */
-    /* margin-top: 60px; */
-    /* border: 2px solid rgb(149, 255, 0); */
-}
 .divconat{
     margin-left: 120px !important;
     /* border: 2px solid black; */
@@ -1555,7 +1540,7 @@ button{
 .Sustainability{
     width: 100%;
     height: auto;
-    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/TREESSUS.png);
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/sustainabout.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1652,7 +1637,7 @@ color: #023047;
         font-family: 'Segoe UI', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 50px;
     /* display: flex; */
     align-items: center;
     text-align: center;
@@ -1734,7 +1719,7 @@ color: #023047;
 height: 72px;
 left: 600px;
 top: 1488px;
-font-family: ;
+/* font-family: ; */
 background: #A7C957 !important;
 border-radius: 4px;
 /* font-style: normal; */
@@ -1959,9 +1944,7 @@ align-items: center;
 
 color: #023047;
 }
-.projectdetailspadding{
-    /* padding-left: calc(var(--bs-gutter-x) * .0) !important; */
-}
+
 .card{
     margin-left: 50px;
     margin-right: 50px;
@@ -2065,9 +2048,7 @@ color: rgba(19, 19, 19, 0.8);
    text-align: left;
 
 }
-.ritathakurtext{
-    /* margin: 34px !important; */
-}
+
 
 #project p{
     color: white;
@@ -2099,29 +2080,6 @@ letter-spacing: 0em;
 text-align: center;
 height: 50px;
 width: 100px;
-
-    /* margin-top: 40px; */
-
-    
-  }
-
-  /* .text-center{
-      font-family: 'Segoe UI', sans-serif;
-font-size: 30px;
-font-weight: 700;
-line-height: 43px;
-letter-spacing: 0em;
-text-align: center;
-  } */
-
-  #frame-4{
-    /* width: 411px;
-    height: 529px;
-    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/Supply.jpg);
-     background-position: left; 
-    background-size: cover;
-    background-repeat: no-repeat; */
-
   }
 
   #frame-4 img{
@@ -2188,11 +2146,8 @@ margin-top: 50px;
 margin-left: 10px;
 margin-left: 50px; 
  margin-right: 50px; 
-
-
   }
- 
-   .layout1{
+.layout1{
     position: left;  
 width: 628px;
 height: 416px;
@@ -2201,8 +2156,6 @@ top: 0;
 color: white;
 text-align: center;
 margin-left: 50px; 
-
-
 /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://gremedia.sgp1.digitaloceanspaces.com/media/Girls.jpeg); */
 margin-top: 50px;
  }
@@ -2276,13 +2229,7 @@ line-height: 19px;
 
 color: #FFFFFF;
 
- }
-
- 
-
-
-
-  
+ } 
 #footer-body {
     margin: 0;
     padding: 0;
@@ -2443,6 +2390,7 @@ line-height: 21px;
     font-family: 'Segoe UI', sans-serif;
 }
 .paddingfromleft{
+    position: absolute;
     padding-left: 180px !important;
     color: #023047;
 }
@@ -2641,9 +2589,7 @@ line-height: 19px;
 color: #FFFFFF;
         }
 
-.clientdetails{
-    /* color: #FFFFFF; */
-}
+
 .projectdetailsfrompage{
     margin-left: 25px;
 }
@@ -2764,6 +2710,24 @@ color: #023047;
     {
         font-family: 'Segoe UI', sans-serif;
     }
+    .float-whatsapp{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:70px;
+        right:18px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+      font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+      z-index:100;
+    }
+    
+    .my-float{
+        margin-top:16px;
+    }
     .mediasectionheading{
             font-family: 'Segoe UI', sans-serif;
 font-style: normal;
@@ -2811,9 +2775,7 @@ color: #023047;
     .responsivepaddingsmedia{
         padding: 21px !important;
     }
-    .responsivepaddingnews{
 
-    }
     .responsiveevents{
         padding-bottom: 25px;
             font-family: 'Segoe UI', sans-serif;
@@ -2865,8 +2827,7 @@ color: #023047;
         padding: 35px;
     }
 
-   .alignmentleft{
-   }
+
     .responsiveeventsss{
         padding: 2px 5px 5px 2px;
     }
@@ -2907,10 +2868,7 @@ color: #023047;
 .sustainabilityheading{
     font-size: 44px !important;
 }
-.sustainability-about-paragraph{
-    /* font-size: 14px; */
-    
-}
+
 .responsivesome{
     padding: 5px;
 }
@@ -3157,10 +3115,7 @@ top: 0px;
         .resposnveheadingsust{
             margin-left: 14px !important;
         }
-        .projectHeading {
-            /* text-align: start !important; */
-            /* font-size: 24px !important; */
-        }
+
         .navbarOne{
             /* margin-left: 30px !important; */
             /* font-weight: 600 !important; */
@@ -4181,9 +4136,7 @@ color: #023047;
         height: calc(100% / 2.41);
     }
     
-    #reqQuote{
-    /* margin-right: 10px; */
-    }
+  
     footer {
         padding: 5rem;
         background-color: var(--background);
@@ -4213,6 +4166,18 @@ color: #023047;
         
         color: #023047;
         
+    }
+    .colourFb{
+        color: #39569c;
+    }
+    .colourtwitter{
+        color: #26a7de;
+    }
+    .colourInstagram{
+        color: #d62976;
+    }
+    .colourlinkdin{
+        color: #0A66C2;
     }
     a{
         text-decoration: none;
@@ -4290,7 +4255,7 @@ color: #023047;
     #hero{
         width: 100%;
         height: 60vh;
-        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/banner-image-about.jpeg);
+        /* background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/banner-image-about.jpeg); */
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -4464,36 +4429,7 @@ color: #023047;
         
     }
  
-    .container h2{
-        /* margin-top: 30px;
-        margin-left: 30px;
-        padding-bottom: 10px; */
-    }
-    
-    .col{
-        /* margin-left: 10px; */
-        /* background-color:#A7C957;
-        padding-bottom: 30px; */
-    }
-    
-    /* .container p{
-        margin-left: 30px;
-        margin-right: 30px;
-        
-    } */
-    .imgframe4{
-        /* height: 100%; */
-    }
-    /* .container-img{
-        height: 50px;
-        width: 50px;
-        margin-left: 10px;
-    } */
-    .border{
-        /* height: ; */
-        /* margin-top: 60px; */
-        /* border: 2px solid rgb(149, 255, 0); */
-    }
+   
     .divconat{
         margin-left: 120px !important;
         /* border: 2px solid black; */
@@ -4548,11 +4484,12 @@ color: #023047;
     .Sustainability{
         width: 100%;
         height: auto;
-        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/TREESSUS.png);
+        /* background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/TREESSUS.png); */
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        /* padding: 60px ; */
+        padding-top: 24%;
+        
     }
     .colorPrevious{
         /* position: absolute; */
@@ -4633,7 +4570,7 @@ color: #023047;
             font-family: 'Segoe UI', sans-serif;
         font-style: normal;
         font-weight: 700;
-        font-size: 32px;
+        font-size: 42px;
         /* display: flex; */
         align-items: center;
         text-align: center;
@@ -4995,24 +4932,7 @@ color: #023047;
         
       }
     
-      /* .text-center{
-          font-family: 'Segoe UI', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 43px;
-    letter-spacing: 0em;
-    text-align: center;
-      } */
-    
-      #frame-4{
-        /* width: 411px;
-        height: 529px;
-        background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/Supply.jpg);
-         background-position: left; 
-        background-size: cover;
-        background-repeat: no-repeat; */
-    
-      }
+
     
       #frame-4 img{
         /* height: 100%; */
