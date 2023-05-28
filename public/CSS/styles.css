@@ -101,9 +101,13 @@ color: #131313;
 #reqQuote{
     background: #A7C957;
     text-align:center;
-    padding: 60px;
+    padding: 16px;
     color:#023047;
-    font-size: 24px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.navbar{
+    --bs-navbar-padding-y: 0rem !important;
 }
 #mediafirstimage{
     width: 100%;
@@ -168,7 +172,15 @@ color: #FFFFFF;
     {
         padding:0 0 10px 10px;
     }
-
+    .top-section-heading-break {
+        margin: 0rem 0 !important;
+    }
+    .collapse {
+        padding: 8px !important;
+    }
+    .boxOneEmail{
+        padding-top: 8px !important;
+    }
 
     #uppertext{
         padding-top: 15px;
@@ -207,6 +219,18 @@ color: #FFFFFF;
     .ourValueBagroundColor {
         background: #A7C957;
     }
+    .biopageheader{
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: bolder;
+        font-size: 3rem;
+
+    }
+    .biographylorem{
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .biographyheader2{
+        font-family: 'Segoe UI', sans-serif;
+    }
     .our-value{
             font-family: 'Segoe UI', sans-serif;
             font-style: normal;
@@ -237,6 +261,12 @@ top: 374px; */
 color: #FFFFFF;
 
 /* background: url(); */
+    }
+    .modelboxshadowing{
+        box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+        transform: translateY(-5px);
+        background-color: #7c9d7c !important;
+
     }
     .fulidbutton{
         width: 240px;
@@ -272,7 +302,7 @@ color: #FFFFFF;
     }
     .indexingcolumbs{
         padding-left: 80px;
-        margin-top: -30px !important;
+        margin-top: 89px !important;
 
     }
     .years{
@@ -355,7 +385,7 @@ color: rgba(19, 19, 19, 0.8);
 
                         font-family: 'Segoe UI', sans-serif;
 
-            font-weight: 400;
+            font-weight: bold;
             font-size: 14px;
             line-height: 19px;
 
@@ -450,7 +480,7 @@ color: rgba(19, 19, 19, 0.8);
         font-weight: bolder;
     }
     .top-section-heading-break{
-    border: 2px solid #A7C957;
+    border: 1px solid #A7C957;
     opacity: 1 !important;
     }
     .headingenergy{
@@ -586,6 +616,9 @@ border-radius: 4px;
     .greenborderallignment{
         margin-top: 29px;
         margin-left: 13px;
+    }
+    .footersubmit{
+        padding: 12px !important;
     }
     .homepagegreenborderparagraph{
             font-family: 'Segoe UI', sans-serif;
@@ -1127,6 +1160,18 @@ align-items: center;
 
 
 }
+/* .float-whatsapp:hover{  
+    margin-right: 107px;
+    transition-duration: 3s, 0s;
+    transition-property: all;
+}
+.hide{
+    visibility: hidden;
+}
+.hide:hover::after{
+    visibility: ;
+} */
+
  .icon{
     margin: 10px;
     color: green;
@@ -1260,7 +1305,7 @@ margin-left: 30px;
 #hero{
     width: 100%;
     height: 60vh;
-    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/aboutusorg.png);
+    background: url(https://gremedia.sgp1.digitaloceanspaces.com/media/Untitled.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1416,7 +1461,7 @@ font-weight: bolder;
         font-family: 'Segoe UI', sans-serif;
     font-weight: 700;
     font-size: 18px;
-
+    text-align: start;
     color: #023047;
 }
 .Designation{
@@ -1425,14 +1470,27 @@ font-weight: 600;
 font-size: 14px;
 line-height: 19px;
 color: #023047;
+text-align: start;
 }
 .caption-baground{
     background: #A7C957;
     /* padding: ; */
-    margin-left: 60px;
-    margin-top: -30px;
+    margin-left: 10px;
+    margin-top: -10px;
+    min-width: 198px;
     position: absolute;
-    min-width: 230px;
+    /* background: #A7C957;
+    margin-left: -145px;
+    margin-top: 92px;
+    position: absolute;
+    width: 172px; */
+}
+.colormodel{
+    /* background-color: #557803 !important; */
+    /* font-family: 'Segoe UI', sans-serif; */
+    /* background: #A7C957;
+    border-radius: 4px; */
+    padding: 0rem !important;
 }
 
 .caption-background{
@@ -2693,6 +2751,96 @@ background: rgba(2, 48, 71, 0.2);
 .card{
     border: none !important;
 }
+.sign_color_ourproject{
+    background-color: #557803;
+}
+.ourproject_divParagraph{
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: rgba(19, 19, 19, 0.8);
+}
+#ourprojectgreenbackgroundtext{
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+/* display: flex; */
+/* align-items: center; */
+
+color: #000000;
+}
+.plus50year{
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 36.4103px;
+line-height: 48px;
+/* display: flex; */
+/* align-items: center; */
+/* text-align: center; */
+
+color: #023047;
+
+}
+.ourprojectlorem{
+    font-family: 'Segoe UI', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+/* display: flex; */
+align-items: center;
+
+color: #131313;
+}
+.ourpoductheading{
+    font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 48px;
+display: flex;
+align-items: center;
+
+color: #023047;
+}
+.infographour_project{
+
+    font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14.5641px;
+    line-height: 19px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* text-align: center; */
+    
+    color: #023047;
+}
+.ourproductheading{
+    font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 48px;
+/* display: flex; */
+/* align-items: center; */
+/* text-align: center; */
+
+color: #023047;
+}
+.gallarydetails{
+    background: rgba(51, 111, 141, 0.2);
+border-radius: 0px;
+    width: 84px !important;
+}
 .biospan{
         font-family: 'Segoe UI', sans-serif;
     font-weight: 600;
@@ -2704,6 +2852,31 @@ align-items: center;
 
 color: #023047;
 }
+#ourproductBackgorund{
+
+        width: 100%;
+        height: auto;
+        background:
+        url(https://gremedia.sgp1.digitaloceanspaces.com/media/WhatsApp%20Image%202023-05-23%20at%2012.17.59%20PM.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+.ourproductsheading{
+font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 85px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+}
+.ourproductgreen{
+    background: #A7C957;
+border-radius: 0px;
+}
 /* media quries start from here/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 @media screen and (max-width: 768px) {
     *
@@ -2714,7 +2887,7 @@ color: #023047;
         position:fixed;
         width:60px;
         height:60px;
-        bottom:70px;
+        bottom:109px;
         right:18px;
         background-color:#25d366;
         color:#FFF;
@@ -3064,7 +3237,7 @@ top: 0px;
         #logo{
             max-height: 72px;
             max-width: 222px; 
-            margin:40px 0px;       
+            margin: 21px 0px;       
         }
         .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl
         {
@@ -3995,6 +4168,17 @@ color: #023047;
         padding-top: 38px;
         padding-bottom: 44px;
     }
+    .responsivehight{
+        height: 47px;
+        position: absolute;
+        margin-left: 72px;
+        margin-top: 6px;
+    }
+
+    .gallaryvideopadding{
+        padding-left: calc(var(--bs-gutter-x) * .0) !important;
+    }
+
     .img{
         width:100%;
         height: auto;
@@ -4101,7 +4285,22 @@ color: #023047;
         margin: 2px;
         
     }
-    
+    /* .float-whatsapp:hover{  
+        margin-right: 107px;
+        transition-duration: 3s, 0s;
+        transition-property: all;
+    } */
+    /* .whatsapphover:hover + .hide {
+        
+        color: green;
+                margin-right: 107px;
+              transition-duration: 5s;
+              transition-property: all;
+      } */
+    /* .hide {
+        visibility: none;
+      } */
+
     .ins{
         margin: 2px;
     }
@@ -4419,7 +4618,12 @@ color: #023047;
         
     <<<<<<< HEAD
     }  */
-    
+    .navbar {
+        padding: 2px !important;
+    }
+    .boxOneEmail{
+        padding: 0px !important;
+    }
     
     .container-button{
     

@@ -3,70 +3,87 @@ import Head from 'next/head'
 import Images from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import { useRouter } from 'next/router'
+const inter = Inter({ subsets: ['latin'] })
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown.js'
 
-const inter = Inter({ subsets: ['latin'] })
 
-// import { ReactMarkdown } from 'react-markdown/lib/react-markdown.js'
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import { useRouter } from 'next/router';
 
 
-export const Slug = ({product,programs,whatsapp}) => {
+
+//added api link
+export async function getServerSideProps() {
+  const [operationsRes,biogasRes,cngsRes,logoRes,teamRes,productRes,whatsappRes] = await Promise.all([
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/bio-gases/?populate=*`),
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/home-bio-gases/?populate=*`),
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/home-bio-cngs/?populate=*`),
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/home-company-logos/?populate=*`),
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/home-teams/?populate=*`),
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/project-details/?populate=*`),
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/whatsapp-numbers/?populate=*`)
+  ]);
+  const [operations,biogas,cngs,logos,team,product,whatsapp] = await Promise.all([
+    operationsRes.json(),
+    biogasRes.json(),
+    cngsRes.json(),
+    logoRes.json(),
+    teamRes.json(),
+    productRes.json(),
+    whatsappRes.json()
+  ]);
+  return { props: { operations,biogas,cngs,logos,team,product,whatsapp} };
+}
+export default function Home({operations,biogas,cngs,logos,team,product,whatsapp}) {
+
+  const { register, formState: { errors }, handleSubmit, } = useForm();
+const router = useRouter();
+
+const onSubmit = async ({ full_name, company_name, email, contact_us, message }) => {
   
-    let courseimage = [];
-    const {query}= useRouter();
-    programs.data.map(row=>{
-      if(row.attributes.Slug == query.Slug){
-        
-          row.attributes.image.data?.map(image=>{
-              courseimage.push(image)
-          })
-      }
-  }); 
+  console.log("Full_name ------> ",full_name);
+  console.log("Company_name ------> ",company_name);
+  console.log("Email ------> ",email);
+  console.log("Contact Us ------> ",contact_us);
+  console.log("Message ------> ",message);
 
-  const onSubmit = async ({ full_names, company_names, emails, contacts_us, messages }) => {
-    
-    console.log("Full_name ------> ",full_names);
-    console.log("Company_name ------> ",company_names);
-    console.log("Email ------> ",emails);
-    console.log("Contact Us ------> ",contacts_us);
-    console.log("Message ------> ",messages);
-  
-    const headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer 8ce388a1b4678b38d51f11cefcb8975648df09f76e3a5e8e7c09a5fd9a297556f9bb555758060fb252cdabc7a9e4f7a614290987e0d1bd92412a28157b25da71f62c28a0e949461b15056215ecebdaa1a4d6e6cca12e3dd05f5d6bc7a26e82c18f45f2a05aebad00c683e6791fbcd875d78b6168a705924abdc78e69eb898489',
-      'Access-Control-Allow-Origin': '*',
-  
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer 8ce388a1b4678b38d51f11cefcb8975648df09f76e3a5e8e7c09a5fd9a297556f9bb555758060fb252cdabc7a9e4f7a614290987e0d1bd92412a28157b25da71f62c28a0e949461b15056215ecebdaa1a4d6e6cca12e3dd05f5d6bc7a26e82c18f45f2a05aebad00c683e6791fbcd875d78b6168a705924abdc78e69eb898489',
+    'Access-Control-Allow-Origin': '*',
+
+  }
+
+  const res = await axios.post('https://whale-app-56hrz.ondigitalocean.app/api/request-quotes/?populate=*', 
+  { data :
+    { 
+      full_name: full_name,
+      company_name: company_name,
+      email: email,
+      contact_us: contact_us,
+      message: message
     }
-  
-    const res = await axios.post('https://whale-app-56hrz.ondigitalocean.app/api/request-quotes/?populate=*', 
-    { data :
-      { 
-        full_name: full_names,
-        company_name: company_names,
-        email: emails,
-        contact_us: contacts_us,
-        message: messages
-      }
-    },{headers})    
-  
-    console.log('res :', res);
-  
-    if(res.hasOwnProperty('error') && res.error){
-      window.alert(res.error.message)
-    }
-    if(res.data){
-        alert("Form Saved Successfully.");
-         router.push('https://grunerrenewable.com');
-    }
-  
-    // You should handle login logic with username, password and remember form data
-    // setUser({ name: name });
-  };
-  //const router = useRouter()
-  //  const { Slug } = router.query
-    return (
- 
+  },{headers})    
+
+  console.log('res :', res);
+
+  if(res.hasOwnProperty('error') && res.error){
+    window.alert(res.error.message)
+  }
+  if(res.data){
+      alert("Form Saved Successfully.");
+       router.push('https://grunerrenewable.com/our_products');
+      
+  }
+
+  // You should handle login logic with username, password and remember form data
+  // setUser({ name: name });
+};
+  //
+
+  return (
     <>
       <Head>
       <title>Gruner Renewable Energy</title>
@@ -75,7 +92,7 @@ export const Slug = ({product,programs,whatsapp}) => {
         <meta name="description" content="Generated by create next app" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="../CSS/styles.css" />
+        <link rel="stylesheet" href="CSS/styles.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
         rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
@@ -83,10 +100,8 @@ export const Slug = ({product,programs,whatsapp}) => {
         </link>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"></link>
       </Head>
- {/* start here */}
-
-  {/* Navigation Starts */}
-  <div className="container-fluid" id="flex-conatiner1">
+       {/* start here */}
+       <div className="container-fluid" id="flex-conatiner1">
     <div className="row ">
       <div className="col-12 col-lg-2 my-auto text-center">
         <a href="/"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/logo-gre.svg" className="img-fluid" id="logo" alt="Gruner Renewable Energy" href="/index"/></a>
@@ -122,7 +137,7 @@ export const Slug = ({product,programs,whatsapp}) => {
               </span></button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-1 mb-lg-0">
-              <li className="nav-item ">
+                <li className="nav-item ">
                   <a className="nav-link active navbarOne" aria-current="page" href="/about">
                     About Us
                   </a>
@@ -179,43 +194,42 @@ export const Slug = ({product,programs,whatsapp}) => {
            {/* <!-- Modal --> */}
            <div className="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
              <div className="modal-dialog">
-             <div className="modal-content modelboxshadowing">
+               <div className="modal-content">
                  <div className="modal-header">
                    <h5 className="modal-title" id="staticBackdropLabel">Request Quote</h5>
                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                  </div>
                  <div className="modal-body">
-                 
-                 <form className="row col-12 col-lg-12 my-5 text-start">
+                 <form className="row col-12 col-lg-12 my-5 text-start" onSubmit={handleSubmit(onSubmit)}>
                   <div className="mb-5 col-12 col-lg-6">
                     <label htmlfor="exampleInputEmail1" className="form-label"  >
                       Full Name*
                     </label>
-                    <input type="text" className="form-control" id aria-describedby="emailHelp" required />
+                    <input type="text" name='full_name' {...register('full_name')} className="form-control" id aria-describedby="emailHelp" required />
                   </div>
                   <div className="mb-5 col-12 col-lg-6">
                     <label htmlfor="exampleInputPassword1" className="form-label">
                       Company Name*
                     </label>
-                    <input type="text" className="form-control" id required/>
+                    <input type="text" name='company_name' {...register('company_name')} className="form-control" id required/>
                   </div>
                   <div className="col-12 col-lg-6">
                     <label htmlfor="inputEmail4" className="form-label">
                       Email
                     </label>
-                    <input type="text"  className="form-control" id aria-describedby="emailHelp" required/>
+                    <input type="text" name='email' {...register('email')} className="form-control" id aria-describedby="emailHelp" required/>
                   </div>
                   <div className="mb-5 col-12 col-lg-6">
                     <label htmlfor="exampleInputPassword1" className="form-label">
                       Contact No.*
                     </label>
-                    <input type="text"  className="form-control" id required/>
+                    <input type="text" name='contact_us' {...register('contact_us')} className="form-control" id required/>
                   </div>
                   <div className="mb-3">
                     <label htmlfor="exampleFormControlTextarea1" className="form-label">
                       Message
                     </label>
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows={3} defaultValue={""} required />
+                    <textarea className="form-control" name='message' {...register('message')} id="exampleFormControlTextarea1" rows={3} defaultValue={""} required />
                   </div>
                      <div className="modal-footer">
         <button type="submit" className=" ">Submit</button>
@@ -234,216 +248,229 @@ export const Slug = ({product,programs,whatsapp}) => {
             <span className="hide"></span>
           {/* <a href="https://api.whatsapp.com/send?phone=.{row?.attributes.number}" className="float-whatsapp" target="_blank"> */}
           <a href={`https://api.whatsapp.com/send?phone=${row?.attributes.number}`} className="float-whatsapp " target="_blank">
-<i className="fa fa-whatsapp my-float"></i><span className='hide'></span> 
+<i className="fa fa-whatsapp my-float"></i>
 </a> 
 {/* <div className="hide">1234567890</div> */}
 </div>
 ))}
   </div>
-{/* {navaition end here} */}
-<div className=' container dateblog '>
-Date : 19th April 2023
+{/* start code */}
+<section id="ourproductBackgorund" className="d-flex align-items-center">
+    <div className="container-fluid pt-lg-5">
+      <h1 className=" ourproductsheading pb-lg-3 pt-lg-5">Our Products</h1>
+      <p className="hero-about-paragraph pb-lg-5">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/> It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+    </div>
+  </section>
+<div className='container pt-lg-5 pt-4 p-0'>
+  <div className='row'>
+    <div className='col-12 col-lg-6'>
+    <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/ourproductsframe2.png" className="img-fluid" alt="..." />
+    <div className='ourproductgreen'>
+    <div className="container">
+    <div className="row no-gutters pt-3">
+  <div className="col-6 col-lg-3 text-center pt-2">
+  <img className="" src="https://gremedia.sgp1.digitaloceanspaces.com/media/charger.png" alt="Generic placeholder image" height={60}/>
+  <h1 className='plus50year'>20+</h1>
+  <p className='infographour_project'>Infographic</p>
+  </div>
+  <div className="col-6 col-lg-9 ourprojectlorem">
+   <p> We drive the transition to more sustainable, reliable & affordable energy systems. With our innovative technologies, we energize society, that’s our aim!</p>
+   <div>
+   <div className="row ">
+            <div className="col-6 col-lg-6">
+              <div className="p-2">
+                <i className="bi bi-check2-circle" id="sign_color_ourproject"> &nbsp; <span id="ourprojectgreenbackgroundtext">Environmental</span></i>
+              </div>
+            </div>
+            <div className="col-6 col-lg-6">
+              <div className="p-2"><i className="bi bi-check2-circle" id="sign_color_ourproject"> &nbsp;<span id="ourprojectgreenbackgroundtext">Reliability</span>
+                </i></div>
+            </div>
+            <div className="col-6 col-lg-6">
+              <div className="p-2"><i className="bi bi-check2-circle" id="sign_color_ourproject">&nbsp; <span id="ourprojectgreenbackgroundtext">Lorem ipsum</span>
+                </i></div>
+            </div>
+            <div className="col-6 col-lg-6">
+              <div className="p-2"><i className="bi bi-check2-circle" id="sign_color_ourproject"> &nbsp;<span id="ourprojectgreenbackgroundtext">Lorem ipsum</span>
+                </i></div>
+            </div>
+          </div>
+   </div>
+    </div>
 </div>
-<div className='container-fluid p-lg-5 p-5'>
-  
-<h1 className='blogheading'>
-{product.attributes.title}
-</h1>
-<ReactMarkdown className='blogdetailspara'>
- {product.attributes.description}
-</ReactMarkdown>
-{courseimage.map( (row) => (
-<img src={ row?.attributes.url} class="img-fluid" alt="..."></img>
-))} 
-<ReactMarkdown className='blogdetailspara pt-5'>
-{product.attributes.detail}
-</ReactMarkdown>
-{/* <div class="col-2 col-lg-2">
-  <img className="chatpng" src="https://gremedia.sgp1.digitaloceanspaces.com/media/" alt="Generic placeholder image" />
-  </div>
-  <div class="col-10 col-lg-10 my-auto">
-    
-  <span className="projectdetailscomma">
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,  </span>
-  </div>
-  <div className="container px-4 text-center">
-  <div className="row gx-5">
-    <div className="col">
-      <div className="p-3">
-      <img src=".../Images/" class="img-fluid" alt="..." />
-      </div>
+</div>
     </div>
-    <div className="col">
-      <div className="p-3">
-      <img src=".../Images/" class="img-fluid" alt="..." />
-      </div>
+    </div>
+    <div className='col-12 col-lg-6 p-lg-4'>
+      <h1 className='text-center ourproductheading'>The better source of energy for the <br/>better tomorrow</h1>
+      <div className='ourproject_divParagraph' pt-lg-2 >Renewable energy technologies are rapidly advancing and becoming more cost-effective, making them increasingly competitive with traditional sources of energy. The use of renewable energy can help reduce greenhouse gas emissions, improve air and water quality, and promote energy independence and security. Many countries have set renewable energy targets as part of their climate change and sustainable development goals, and there is a growing global movement toward transitioning to a renewable energy-based economy.</div><br/>
+      <div className='ourproject_divParagraph' >Renewable energy technologies are rapidly advancing and becoming more cost-effective, making them increasingly competitive with traditional sources of energy. The use of renewable energy can help reduce greenhouse gas emissions, improve air and water quality, and promote energy independence and security. Many countries have set renewable energy targets as part of their climate change and sustainable development goals, and there is a growing global movement toward transitioning to a renewable energy-based economy.</div><br/>
+      <div className='ourproject_divParagraph' >Renewable energy technologies are rapidly advancing and becoming more cost-effective, making them increasingly competitive with traditional sources of energy. The use of renewable energy can help reduce greenhouse gas emissions, improve air and water quality, and promote energy independence and security. Many countries have set renewable energy targets as part of their climate change and sustainable development goals, and there is a growing global movement toward transitioning to a renewable energy-based economy.</div><br/>
+      <div className='ourproject_divParagraph' >Renewable energy technologies are rapidly advancing and becoming more cost-effective, making them increasingly competitive with traditional sources of energy. The use of renewable energy can help reduce greenhouse gas emissions, improve air and water quality, and promote energy independence and security. Many countries have set renewable energy targets as part of their climate change and sustainable development goals, and there is a growing global movement toward transitioning to a renewable energy-based economy.</div><br/>
     </div>
   </div>
-  
+</div>
+
+{/* frame 3 start */}
+<div class="container p-0">
+  <div class="row row-cols-2 pt-lg-5 pt-5">
+    <div class="col-12 col-lg-6">
+    <span className="biospan p-lg-3 p-2">BIO - GAS</span>
+    <h1 className='ourpoductheading pt-lg-4 pt-4'>Energy For A Sustainable And Environmentally Friendly Society.</h1>
+    <p>Biogas is a type of renewable energy that is produced through the anaerobic digestion of organic materials such as food waste, agricultural waste, and sewage. The process involves breaking down the organic matter using bacteria in an oxygen-free environment, which produces a mixture of gases, primarily methane and carbon dioxide. Biogas can be used as a fuel for heating, cooking, and electricity generation, and it is considered a sustainable alternative to fossil fuels because it helps to reduce greenhouse gas emissions and can also help to manage organic waste. Biogas production is a growing industry worldwide, with many countries promoting its use as part of their renewable energy strategies.</p>
+    </div>
+    <div class="col-12 col-lg-6">
+    <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/ourproductbiogas.png" class="img-fluid" alt="..." />
+    </div>
+
+  </div>
+</div>
+{/* frame 3 end */}
+{/* <div className='container'>
+<div className='row'>
+  <div className='col-12 col-lg-4'>
+  <div className="media">
+            <img
+              className="mr-3 "
+              src="https://gremedia.sgp1.digitaloceanspaces.com/media/enviromentourproduct.png"
+              alt="Generic placeholder image"
+            />
+            <div className="media-body">
+              <h5 className=" ">Environment Friendly</h5>
+              <p className=''> 
+              BIO CNG plants are a sustainable alternative to traditional fossil fuels and help to reduce greenhouse gas emissions. The biogas produced from organic waste is a renewable energy source that can be used to power vehicles, generate electricity, or for heating purposes.
+              </p>
+            </div>
+          </div>
+  </div>
+  <div className='col-12 col-lg-4'>
+  <div className="media">
+            <img
+              className="mr-3 "
+              src="https://gremedia.sgp1.digitaloceanspaces.com/media/costourproduct.png"
+              alt="Generic placeholder image"
+            />
+            <div className="media-body">
+              <h5 className=" ">Environment Friendly</h5>
+              <p className=''> 
+              BIO CNG plants are a sustainable alternative to traditional fossil fuels and help to reduce greenhouse gas emissions. The biogas produced from organic waste is a renewable energy source that can be used to power vehicles, generate electricity, or for heating purposes.
+              </p>
+            </div>
+          </div>
+  </div>
+  <div className='col-12 col-lg-4'>
+  <div className="media">
+            <img
+              className="mr-3 "
+              src="https://gremedia.sgp1.digitaloceanspaces.com/media/enviromentourproduct.png"
+              alt="Generic placeholder image"
+            />
+            <div className="media-body">
+              <h5 className=" ">Environment Friendly</h5>
+              <p className=''> 
+              BIO CNG plants are a sustainable alternative to traditional fossil fuels and help to reduce greenhouse gas emissions. The biogas produced from organic waste is a renewable energy source that can be used to power vehicles, generate electricity, or for heating purposes.
+              </p>
+            </div>
+          </div>
+  </div>
+</div>
 </div> */}
-{/* <p className='blogdetailspara pt-5'>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-<br/>
-<br/>
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-<br/>
-<br/>
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-<br/>
-<br/>
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages.
-</p> */}
-
-</div>
-<div className='container ritathakurtext'>
-  <h1 className='ritathakur'>- Rita Thakur</h1>
-  <h4 className='ritadesignation'>- Designation, Organization</h4>
-</div>
-
-{/* code start here */}
-{/* code end here */}
-    {/* form start here */}
-    <div className="container-fluid p-0">
-            <div className="container pt-lg-5">
-            <div className="row">
-              <div className="col-12 col-lg-6 getintouchbackgroundcolor my-auto">
-                <div className="container-hight  text-start">
-                  <div className="row p-lg-5">
-                    <div className="col-12 col-lg-6">
-                      <div className="pt-5 pb-5">
-                        <span className="gettouchpng p-lg-3 p-3">GET IN TOUCH</span>
-                      </div>
-                    </div>
-                    <div className="col-12 col-lg-12">
-                      <div className="pt-lg-3">
-                        <h3 className="projectHeadingform">
-                          Let's Start Project With Our Company &amp; Booking Now !
-                        </h3>
-                      </div>
-                    </div>
-                    <div className="col-12 col-lg-12">
-                      <div className="pt-lg-3">
-                        <p>
-                        The BIO CNG plants developed by Gruner Renewables using are highly efficient, cost-effective, and environmentally friendly. Our team of experts has been working closely with clients to provide customized solutions that meet their specific requirements. 
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-12 col-lg-12">
-                      <div className="pt-lg-5 pb-lg-5">
-                        <div className="row">
-                          <div classname="">
-                          <div class="row g-0 ">
-  <div class="col-2 col-lg-2">
-  <img className="chatpng" src="https://gremedia.sgp1.digitaloceanspaces.com/media/chats.png" alt="Generic placeholder image" />
+       {biogas.data?.map( (row) => (
+    <div class="container pb-lg-5 pt-lg-5">
+  <div class="row g-2 p-lg-3 resposvibeblocks">
+    <div class="col-12 col-lg-4 pt-5 pt-lg-0">
+      <div class="p-3 homepagegreenborderparagraph border-colorofhomepagenbiogas ">
+      <span className="ryticonimage"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/Untitled%20(9).png" /></span>
+      <h1 className='homepagesgreenborderheader'> {row?.attributes.blog_title1}</h1>
+        <ReactMarkdown className='homepagegreenborderparagraph pb-lg-3'> 
+        {row?.attributes.blog_detail1}
+        </ReactMarkdown>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 pt-5 pt-lg-0">
+      <div class="p-3 homepagegreenborderparagraph border-colorofhomepagenbiogas">
+      <span className="ryticonimage"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/Untitled%20(7).png" /></span>
+      <h1 className='homepagesgreenborderheader'>  {row?.attributes.blog_title2}</h1>
+      <ReactMarkdown className='homepagegreenborderparagraph pb-lg-3'> 
+        {row?.attributes.blog_detail2}
+        </ReactMarkdown>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 pt-5 pt-lg-0">
+      <div class="p-3 homepagegreenborderparagraph border-colorofhomepagenbiogas">
+      <span className="ryticonimage"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/biogasicons.png" /></span>
+      <h1 className='homepagesgreenborderheader'>  {row?.attributes.blog_title3}</h1>
+      <ReactMarkdown className='homepagegreenborderparagraph pb-lg-3 img-fluid'> 
+        {row?.attributes.blog_detail3}
+        </ReactMarkdown>
+      </div>
+    </div>
   </div>
-  <div class="col-10 col-lg-10 my-auto">
+</div>
+   ))}
+{/*  */}
+<div className="container text-center">
+      <div className="row ">
+        <div className="col-12 col-lg-12 my-5">
+          <span className="emergyspan p-lg-2 text-center">AS PER FEBRUARY 2018</span>
+          <h1 className="projectHeading pt-5">State-Wise Installed Bio-CNG <br /> Capacity</h1>
+          <div>
+            <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/graph.png" alt="" srcset=""  className='img-fluid'/>
+          </div>
+        </div>
+      </div>
+    </div>
+{/* frame 4 start here */}
+{operations.data?.map( (row) => (
+    <div className="container text-center">
+      <div className="row ">
+        <div className="col-12 col-lg-12 my-5">
+          <span className="emergyspan p-lg-2 text-center">EMERGING TECHNOLOGIES</span>
+          <h1 className="projectHeading pt-5">{row?.attributes.emerging_technologies_title}</h1>
+          <ReactMarkdown className="greenparagraphbiopaspage p-lg-5 mx-auto">{row?.attributes.emerging_technologies_description}</ReactMarkdown>
+        </div>
+        <div className="col-12 col-lg-12">
+          <div className="row">
+            <div className="col-12 col-lg-6 text-start">
+              <div>
+              
+                <h1 className="bioemergencyheading"> {row?.attributes.emerging_technologies_title1} :</h1>
+                <ReactMarkdown className="biogasemergencyparagraph">{row?.attributes.emerging_technologies_description1}</ReactMarkdown>
+              </div>
+              <div>
+                <h1 className="bioemergencyheading">{row?.attributes.emerging_technologies_title2}:</h1>
+                <ReactMarkdown className="biogasemergencyparagraph">{row?.attributes.emerging_technologies_description2}</ReactMarkdown>
+              </div>
+              <div>
+                <h1 className="bioemergencyheading">{row?.attributes.emerging_technologies_title3}:</h1>
+                <ReactMarkdown className="biogasemergencyparagraph">{row?.attributes.emerging_technologies_description3}</ReactMarkdown>
+              </div>
+            </div>
+            <div className="col-12 col-lg-6 text-start">
+              <div>
+                <h1 className="bioemergencyheading">{row?.attributes.emerging_technologies_title4}:</h1>
+                <ReactMarkdown className="biogasemergencyparagraph">{row?.attributes.emerging_technologies_description4}</ReactMarkdown>
+              </div>
+              <div>
+                <h1 className="bioemergencyheading">{row?.attributes.emerging_technologies_title5} : </h1>
+                <ReactMarkdown className="biogasemergencyparagraph">{row?.attributes.emerging_technologies_description5}</ReactMarkdown>
+              </div>
+              <div>
+                <h1 className="bioemergencyheading">{row?.attributes.emerging_technologies_title6} :</h1>
+                <ReactMarkdown className="biogasemergencyparagraph">{row?.attributes.emerging_technologies_description6}</ReactMarkdown>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     ))}
+{/* frame 4 end here */}
+
+{/* end code */}
     
-  <span className="getcotact">
-                                Receive an accurate quote within 3-5 days when you fill out this form. Or, give us a call: 1800 890 5180</span>
-  </div>
-</div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-lg-6 whitebackroundform p-lg-5 p-5">
-                <h3 class="text-center projectHeadingform" >Get In Touch </h3>
-                <div>
-
-                <form className="row col-12 col-lg-12 my-5 text-start">
-                  <div className="mb-5 col-12 col-lg-6">
-                    <label htmlfor="exampleInputEmail1" className="form-label">
-                      Full Name*
-                    </label>
-                    <input type="text" className="form-control" id aria-describedby="emailHelp" />
-                  </div>
-                  <div className="mb-5 col-12 col-lg-6">
-                    <label htmlfor="exampleInputPassword1" className="form-label">
-                      Company Name*
-                    </label>
-                    <input type="text" className="form-control" id />
-                  </div>
-                  <div className="col-12 col-lg-6">
-                    <label htmlfor="inputEmail4" className="form-label">
-                      Email
-                    </label>
-                    <input type="text" className="form-control" id aria-describedby="emailHelp" />
-                  </div>
-                  <div className="mb-5 col-12 col-lg-6">
-                    <label htmlfor="exampleInputPassword1" className="form-label">
-                      Contact No.*
-                    </label>
-                    <input type="text" className="form-control" id />
-                  </div>
-                  <div className="mb-3">
-                    <label htmlfor="exampleFormControlTextarea1" className="form-label">
-                      Message
-                    </label>
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows={3} defaultValue={""} />
-                  </div>
-                  <div className='pt-3'>Preferred Contact Method*</div>
-                  <div className="row ">
-                  <div class="container">
-  <div class="row pt-5">
-    <div class="col order-first">
-    <input
-    className="form-check-input"
-    type="radio"
-    name="exampleRadios"
-    id="exampleRadios1"
-    defaultValue="option1"
-    defaultChecked=""
-  />
-  <label className="form-check-label pt-2 mx-3" htmlFor="exampleRadios1">
-    All
-  </label>
-    </div>
-    <div class="col">
-    <input
-    className="form-check-input"
-    type="radio"
-    name="exampleRadios"
-    id="exampleRadios1"
-    defaultValue="option1"
-    defaultChecked=""
-  />
-  <label className="form-check-label pt-2 mx-3" htmlFor="exampleRadios1">
-    Phone
-  </label>
-    </div>
-    <div class="col order-last">
-    <input
-    className="form-check-input"
-    type="radio"
-    name="exampleRadios"
-    id="exampleRadios1"
-    defaultValue="option1"
-    defaultChecked=""
-  />
-  <label className="form-check-label pt-2 mx-3" htmlFor="exampleRadios1">
-    Email
-  </label>
-    </div>
-  </div>
-</div>
-                   </div>
-                  <div className="row pt-5">
-                    <button type="submit" className=" btn-primary formsubmittbuttin">
-                      Submit Request <i class="bi bi-arrow-right"></i>
-                    </button>
-                  </div></form>
-                </div>
-              </div>
-            </div>
-            </div>
-            </div>
-          {/* form start end */}
-  
-  <div className="container-fluid pt-lg-5" id="footer-body">
+     {/* Footer Ends here */}
+     <div className="container-fluid pt-lg-5" id="footer-body">
             <footer>
               <div className="footer-section left col-lg-4 col-12">
                 <div className="upper-portion">
@@ -454,7 +481,7 @@ It is a long established fact that a reader will be distracted by the readable c
                       <a href="/biogas" className="white-font">Bio Gas</a>
                       <a href="/project" className="white-font">Our Projects</a>
                       <a href="/sustainability" className="white-font">Sustainability</a>
-                      <a href="/blogs" className="white-font">Blogs</a>
+                      {/* <a href="/blogs" className="white-font">Blogs</a> */}
                       <a href="/media" className="white-font">Media</a>
                       <a href="/gallery" className="white-font">Gallery</a>
                     </div>
@@ -493,7 +520,7 @@ It is a long established fact that a reader will be distracted by the readable c
                   </a>
                 </div>
               </div>
-              <div className="footer-section center col-lg-4 col-4">
+              <div className="footer-section center col-lg-4 col-12">
                 <div className="social-icons">
                 <a href="https://www.facebook.com/GrunerRenewables">
                     <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor" className="bi bi-facebook footercolorspan colourFb" viewBox="0 0 16 16">
@@ -525,7 +552,7 @@ It is a long established fact that a reader will be distracted by the readable c
               </div>
               <div className="footer-section right col-lg-4 col-12">
                 <h3>Subscribe To Our Newsletter!</h3>
-                <p className="footercolorspan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...</p>
+                <p className="footercolorspan">Receive news and promotions by email from Gruner Renewable!</p>
                 <form action>
                   <input type="text" name id placeholder="Enter your mail Address" />
                   <div className="pt-lg-3">
@@ -552,18 +579,3 @@ It is a long established fact that a reader will be distracted by the readable c
     </>
   )
 }
-
-export async function getServerSideProps(context) {
-    const [productRes,programsRes,whatsappRes] = await Promise.all([
-        fetch(`https://whale-app-56hrz.ondigitalocean.app/api/blog-details/?filters[Slug]=` + context.query.Slug ),
-        fetch(`https://whale-app-56hrz.ondigitalocean.app/api/blog-details/?populate=*`),
-        fetch(`https://whale-app-56hrz.ondigitalocean.app/api/whatsapp-numbers/?populate=*`)
-    ]);
-    const [product,programs,whatsapp] = await Promise.all([
-        productRes.json(),
-        programsRes.json(),
-        whatsappRes.json()
-    ]);
-    return { props: {product:product.data[0],programs,whatsapp} };
-}
-export default Slug

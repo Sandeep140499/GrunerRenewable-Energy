@@ -1,29 +1,29 @@
 
 import Head from 'next/head'
 import Images from 'next/image'
+import { useRouter } from 'next/router'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import { useRouter } from 'next/router'
+const inter = Inter({ subsets: ['latin'] })
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown.js'
 
-const inter = Inter({ subsets: ['latin'] })
 
-// import { ReactMarkdown } from 'react-markdown/lib/react-markdown.js'
+
 
 
 export const Slug = ({product,programs,whatsapp}) => {
-  
+
+   
     let courseimage = [];
     const {query}= useRouter();
     programs.data.map(row=>{
       if(row.attributes.Slug == query.Slug){
         
-          row.attributes.image.data?.map(image=>{
+          row.attributes.image_team.data?.map(image=>{
               courseimage.push(image)
           })
       }
   }); 
-
   const onSubmit = async ({ full_names, company_names, emails, contacts_us, messages }) => {
     
     console.log("Full_name ------> ",full_names);
@@ -64,9 +64,8 @@ export const Slug = ({product,programs,whatsapp}) => {
     // setUser({ name: name });
   };
   //const router = useRouter()
-  //  const { Slug } = router.query
+  // const { Slug } = router.query
     return (
- 
     <>
       <Head>
       <title>Gruner Renewable Energy</title>
@@ -83,7 +82,6 @@ export const Slug = ({product,programs,whatsapp}) => {
         </link>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"></link>
       </Head>
- {/* start here */}
 
   {/* Navigation Starts */}
   <div className="container-fluid" id="flex-conatiner1">
@@ -122,7 +120,7 @@ export const Slug = ({product,programs,whatsapp}) => {
               </span></button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-1 mb-lg-0">
-              <li className="nav-item ">
+                <li className="nav-item ">
                   <a className="nav-link active navbarOne" aria-current="page" href="/about">
                     About Us
                   </a>
@@ -185,42 +183,43 @@ export const Slug = ({product,programs,whatsapp}) => {
                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                  </div>
                  <div className="modal-body">
-                 
                  <form className="row col-12 col-lg-12 my-5 text-start">
-                  <div className="mb-5 col-12 col-lg-6">
-                    <label htmlfor="exampleInputEmail1" className="form-label"  >
-                      Full Name*
-                    </label>
-                    <input type="text" className="form-control" id aria-describedby="emailHelp" required />
-                  </div>
-                  <div className="mb-5 col-12 col-lg-6">
-                    <label htmlfor="exampleInputPassword1" className="form-label">
-                      Company Name*
-                    </label>
-                    <input type="text" className="form-control" id required/>
-                  </div>
-                  <div className="col-12 col-lg-6">
-                    <label htmlfor="inputEmail4" className="form-label">
-                      Email
-                    </label>
-                    <input type="text"  className="form-control" id aria-describedby="emailHelp" required/>
-                  </div>
-                  <div className="mb-5 col-12 col-lg-6">
-                    <label htmlfor="exampleInputPassword1" className="form-label">
-                      Contact No.*
-                    </label>
-                    <input type="text"  className="form-control" id required/>
-                  </div>
-                  <div className="mb-3">
-                    <label htmlfor="exampleFormControlTextarea1" className="form-label">
-                      Message
-                    </label>
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows={3} defaultValue={""} required />
-                  </div>
-                     <div className="modal-footer">
-        <button type="submit" className=" ">Submit</button>
-      </div>
-      </form>
+                             <div className="mb-5 col-12 col-lg-6">
+                               <label htmlfor="exampleInputEmail1" className="form-label"  >
+                                 Full Name*
+                               </label>
+                               <input type="text" className="form-control" id aria-describedby="emailHelp" required />
+                             </div>
+                             <div className="mb-5 col-12 col-lg-6">
+                               <label htmlfor="exampleInputPassword1" className="form-label">
+                                 Company Name*
+                               </label>
+                               <input type="text" className="form-control" id required/>
+                             </div>
+                             <div className="col-12 col-lg-6">
+                               <label htmlfor="inputEmail4" className="form-label">
+                                 Email
+                               </label>
+                               <input type="text" className="form-control" id aria-describedby="emailHelp" required/>
+                             </div>
+                             <div className="mb-5 col-12 col-lg-6">
+                               <label htmlfor="exampleInputPassword1" className="form-label">
+                                 Contact No.*
+                               </label>
+                               <input type="text" className="form-control" id required/>
+                             </div>
+                             <div className="mb-3">
+                               <label htmlfor="exampleFormControlTextarea1" className="form-label">
+                                 Message
+                               </label>
+                               <textarea className="form-control" id="exampleFormControlTextarea1" rows={3} defaultValue={""} required />
+                             </div>
+                            
+                                <div className="modal-footer">
+                   {/* <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
+                   <button type="submit" className=" btn-primary ">Submit</button>
+                 </div>
+                             </form>
                  </div>
            
                </div>
@@ -240,210 +239,29 @@ export const Slug = ({product,programs,whatsapp}) => {
 </div>
 ))}
   </div>
-{/* {navaition end here} */}
-<div className=' container dateblog '>
-Date : 19th April 2023
-</div>
-<div className='container-fluid p-lg-5 p-5'>
-  
-<h1 className='blogheading'>
-{product.attributes.title}
-</h1>
-<ReactMarkdown className='blogdetailspara'>
- {product.attributes.description}
-</ReactMarkdown>
-{courseimage.map( (row) => (
-<img src={ row?.attributes.url} class="img-fluid" alt="..."></img>
-))} 
-<ReactMarkdown className='blogdetailspara pt-5'>
-{product.attributes.detail}
-</ReactMarkdown>
-{/* <div class="col-2 col-lg-2">
-  <img className="chatpng" src="https://gremedia.sgp1.digitaloceanspaces.com/media/" alt="Generic placeholder image" />
-  </div>
-  <div class="col-10 col-lg-10 my-auto">
-    
-  <span className="projectdetailscomma">
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,  </span>
-  </div>
-  <div className="container px-4 text-center">
-  <div className="row gx-5">
-    <div className="col">
-      <div className="p-3">
-      <img src=".../Images/" class="img-fluid" alt="..." />
-      </div>
-    </div>
-    <div className="col">
-      <div className="p-3">
-      <img src=".../Images/" class="img-fluid" alt="..." />
-      </div>
-    </div>
-  </div>
-  
-</div> */}
-{/* <p className='blogdetailspara pt-5'>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-<br/>
-<br/>
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-<br/>
-<br/>
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-<br/>
-<br/>
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages.
-</p> */}
+  {/* Navigation Ends */}
 
+  {/* code start from here  */}
+  <div class="container p-0">
+    <div className='row'>
+    <div class="col-12 col-lg-3 p-3 ">
+    {courseimage.map( (row) => (
+    <img src={ row?.attributes.url} class="img-fluid" alt="..."/>
+    ))} 
 </div>
-<div className='container ritathakurtext'>
-  <h1 className='ritathakur'>- Rita Thakur</h1>
-  <h4 className='ritadesignation'>- Designation, Organization</h4>
+  <div class="col-12 col-lg-9 p-3 pt-lg-2 text-center">
+  <h1 className='pt-lg-5 biopageheader'>{product.attributes.name}</h1>
+    <h2 className='pt-lg-3 biographyheader2'>({product.attributes.description})</h2>
 </div>
-
-{/* code start here */}
-{/* code end here */}
-    {/* form start here */}
-    <div className="container-fluid p-0">
-            <div className="container pt-lg-5">
-            <div className="row">
-              <div className="col-12 col-lg-6 getintouchbackgroundcolor my-auto">
-                <div className="container-hight  text-start">
-                  <div className="row p-lg-5">
-                    <div className="col-12 col-lg-6">
-                      <div className="pt-5 pb-5">
-                        <span className="gettouchpng p-lg-3 p-3">GET IN TOUCH</span>
-                      </div>
-                    </div>
-                    <div className="col-12 col-lg-12">
-                      <div className="pt-lg-3">
-                        <h3 className="projectHeadingform">
-                          Let's Start Project With Our Company &amp; Booking Now !
-                        </h3>
-                      </div>
-                    </div>
-                    <div className="col-12 col-lg-12">
-                      <div className="pt-lg-3">
-                        <p>
-                        The BIO CNG plants developed by Gruner Renewables using are highly efficient, cost-effective, and environmentally friendly. Our team of experts has been working closely with clients to provide customized solutions that meet their specific requirements. 
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-12 col-lg-12">
-                      <div className="pt-lg-5 pb-lg-5">
-                        <div className="row">
-                          <div classname="">
-                          <div class="row g-0 ">
-  <div class="col-2 col-lg-2">
-  <img className="chatpng" src="https://gremedia.sgp1.digitaloceanspaces.com/media/chats.png" alt="Generic placeholder image" />
-  </div>
-  <div class="col-10 col-lg-10 my-auto">
-    
-  <span className="getcotact">
-                                Receive an accurate quote within 3-5 days when you fill out this form. Or, give us a call: 1800 890 5180</span>
-  </div>
+<div class="col-lg-12 col-12  p-3 biographylorem">
+<ReactMarkdown>{product.attributes.detail}</ReactMarkdown>
 </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-lg-6 whitebackroundform p-lg-5 p-5">
-                <h3 class="text-center projectHeadingform" >Get In Touch </h3>
-                <div>
-
-                <form className="row col-12 col-lg-12 my-5 text-start">
-                  <div className="mb-5 col-12 col-lg-6">
-                    <label htmlfor="exampleInputEmail1" className="form-label">
-                      Full Name*
-                    </label>
-                    <input type="text" className="form-control" id aria-describedby="emailHelp" />
-                  </div>
-                  <div className="mb-5 col-12 col-lg-6">
-                    <label htmlfor="exampleInputPassword1" className="form-label">
-                      Company Name*
-                    </label>
-                    <input type="text" className="form-control" id />
-                  </div>
-                  <div className="col-12 col-lg-6">
-                    <label htmlfor="inputEmail4" className="form-label">
-                      Email
-                    </label>
-                    <input type="text" className="form-control" id aria-describedby="emailHelp" />
-                  </div>
-                  <div className="mb-5 col-12 col-lg-6">
-                    <label htmlfor="exampleInputPassword1" className="form-label">
-                      Contact No.*
-                    </label>
-                    <input type="text" className="form-control" id />
-                  </div>
-                  <div className="mb-3">
-                    <label htmlfor="exampleFormControlTextarea1" className="form-label">
-                      Message
-                    </label>
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows={3} defaultValue={""} />
-                  </div>
-                  <div className='pt-3'>Preferred Contact Method*</div>
-                  <div className="row ">
-                  <div class="container">
-  <div class="row pt-5">
-    <div class="col order-first">
-    <input
-    className="form-check-input"
-    type="radio"
-    name="exampleRadios"
-    id="exampleRadios1"
-    defaultValue="option1"
-    defaultChecked=""
-  />
-  <label className="form-check-label pt-2 mx-3" htmlFor="exampleRadios1">
-    All
-  </label>
     </div>
-    <div class="col">
-    <input
-    className="form-check-input"
-    type="radio"
-    name="exampleRadios"
-    id="exampleRadios1"
-    defaultValue="option1"
-    defaultChecked=""
-  />
-  <label className="form-check-label pt-2 mx-3" htmlFor="exampleRadios1">
-    Phone
-  </label>
-    </div>
-    <div class="col order-last">
-    <input
-    className="form-check-input"
-    type="radio"
-    name="exampleRadios"
-    id="exampleRadios1"
-    defaultValue="option1"
-    defaultChecked=""
-  />
-  <label className="form-check-label pt-2 mx-3" htmlFor="exampleRadios1">
-    Email
-  </label>
-    </div>
-  </div>
 </div>
-                   </div>
-                  <div className="row pt-5">
-                    <button type="submit" className=" btn-primary formsubmittbuttin">
-                      Submit Request <i class="bi bi-arrow-right"></i>
-                    </button>
-                  </div></form>
-                </div>
-              </div>
-            </div>
-            </div>
-            </div>
-          {/* form start end */}
-  
-  <div className="container-fluid pt-lg-5" id="footer-body">
+  {/* code end from here  */}
+
+{/* Footer Ends here */}
+<div className="container-fluid pt-lg-5" id="footer-body">
             <footer>
               <div className="footer-section left col-lg-4 col-12">
                 <div className="upper-portion">
@@ -454,7 +272,7 @@ It is a long established fact that a reader will be distracted by the readable c
                       <a href="/biogas" className="white-font">Bio Gas</a>
                       <a href="/project" className="white-font">Our Projects</a>
                       <a href="/sustainability" className="white-font">Sustainability</a>
-                      <a href="/blogs" className="white-font">Blogs</a>
+                      {/* <a href="/blogs" className="white-font">Blogs</a> */}
                       <a href="/media" className="white-font">Media</a>
                       <a href="/gallery" className="white-font">Gallery</a>
                     </div>
@@ -493,7 +311,7 @@ It is a long established fact that a reader will be distracted by the readable c
                   </a>
                 </div>
               </div>
-              <div className="footer-section center col-lg-4 col-4">
+              <div className="footer-section center col-lg-4 col-12">
                 <div className="social-icons">
                 <a href="https://www.facebook.com/GrunerRenewables">
                     <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor" className="bi bi-facebook footercolorspan colourFb" viewBox="0 0 16 16">
@@ -525,7 +343,7 @@ It is a long established fact that a reader will be distracted by the readable c
               </div>
               <div className="footer-section right col-lg-4 col-12">
                 <h3>Subscribe To Our Newsletter!</h3>
-                <p className="footercolorspan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...</p>
+                <p className="footercolorspan">Receive news and promotions by email from Gruner Renewable!</p>
                 <form action>
                   <input type="text" name id placeholder="Enter your mail Address" />
                   <div className="pt-lg-3">
@@ -552,11 +370,10 @@ It is a long established fact that a reader will be distracted by the readable c
     </>
   )
 }
-
 export async function getServerSideProps(context) {
     const [productRes,programsRes,whatsappRes] = await Promise.all([
-        fetch(`https://whale-app-56hrz.ondigitalocean.app/api/blog-details/?filters[Slug]=` + context.query.Slug ),
-        fetch(`https://whale-app-56hrz.ondigitalocean.app/api/blog-details/?populate=*`),
+        fetch(`https://whale-app-56hrz.ondigitalocean.app/api/home-teams/?filters[Slug]=` + context.query.Slug ),
+        fetch(`https://whale-app-56hrz.ondigitalocean.app/api/home-teams/?populate=*`),
         fetch(`https://whale-app-56hrz.ondigitalocean.app/api/whatsapp-numbers/?populate=*`)
     ]);
     const [product,programs,whatsapp] = await Promise.all([

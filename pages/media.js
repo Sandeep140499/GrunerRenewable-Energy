@@ -6,23 +6,76 @@ import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown.js'
 
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import { useRouter } from 'next/router';
+
+
 export async function getServerSideProps() {
-  const [operationsRes,bannerRes] = await Promise.all([
+  const [operationsRes,bannerRes,whatsappRes] = await Promise.all([
     fetch(`https://whale-app-56hrz.ondigitalocean.app/api/medias/?populate=*`),
-    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/media-banners/?populate=*`)
-    // fetch(`https://lobster-app-soz2y.ondigitalocean.app/api/ratings/?populate=*`)
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/media-banners/?populate=*`),
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/whatsapp-numbers/?populate=*`)
 
     // fetch(`http://localhost:1337/api/services/?populate=*`),
     // fetch(`http://localhost:1337/api/careers/?populate=*`)
   ]);
-  const [operations,banner] = await Promise.all([
+  const [operations,banner,whatsapp] = await Promise.all([
     operationsRes.json(),
-    bannerRes.json()
-    // ratingRes.json()
+    bannerRes.json(),
+    whatsappRes.json()
   ]);
-  return { props: { operations,banner} };
+  return { props: { operations,banner,whatsapp} };
 }
-export default function Home({operations,banner}) {
+export default function Home({operations,banner,whatsapp}) {
+
+  const { register, formState: { errors }, handleSubmit, } = useForm();
+const router = useRouter();
+
+const onSubmit = async ({ full_name, company_name, email, contact_us, message }) => {
+  
+  console.log("Full_name ------> ",full_name);
+  console.log("Company_name ------> ",company_name);
+  console.log("Email ------> ",email);
+  console.log("Contact Us ------> ",contact_us);
+  console.log("Message ------> ",message);
+
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer 8ce388a1b4678b38d51f11cefcb8975648df09f76e3a5e8e7c09a5fd9a297556f9bb555758060fb252cdabc7a9e4f7a614290987e0d1bd92412a28157b25da71f62c28a0e949461b15056215ecebdaa1a4d6e6cca12e3dd05f5d6bc7a26e82c18f45f2a05aebad00c683e6791fbcd875d78b6168a705924abdc78e69eb898489',
+    'Access-Control-Allow-Origin': '*',
+
+  }
+
+  const res = await axios.post('https://whale-app-56hrz.ondigitalocean.app/api/request-quotes/?populate=*', 
+  { data :
+    { 
+      full_name: full_name,
+      company_name: company_name,
+      email: email,
+      contact_us: contact_us,
+      message: message
+    }
+  },{headers})    
+
+  console.log('res :', res);
+
+  if(res.hasOwnProperty('error') && res.error){
+    window.alert(res.error.message)
+  }
+  if(res.data){
+      alert("Form Saved Successfully.");
+       router.push('https://grunerrenewable.com/media');
+      
+  }
+
+  // You should handle login logic with username, password and remember form data
+  // setUser({ name: name });
+};
+  //
+
+
   return (
     <>
       <Head>
@@ -45,10 +98,10 @@ export default function Home({operations,banner}) {
   {/* Navigation Starts */}
   <div className="container-fluid" id="flex-conatiner1">
     <div className="row ">
-      <div className="col-12 col-lg-3 my-auto text-center">
-      <a href="/"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/logo-gre.svg" className="img-fluid" id="logo" alt="Gruner Renewable Energy" href="/index"/></a>
+      <div className="col-12 col-lg-2 my-auto text-center">
+        <a href="/"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/logo-gre.svg" className="img-fluid" id="logo" alt="Gruner Renewable Energy" href="/index"/></a>
       </div>
-      <div className="col-12 col-lg-7 pt-lg-4" id>
+      <div className="col-12 col-lg-9 " id>
         <div className="row ">
           <div className="col-12 col-lg-5 boxOneEmail">
             <p>
@@ -71,7 +124,7 @@ export default function Home({operations,banner}) {
             <a href="https://www.linkedin.com/company/gruner-renewable-energy/"><i className="bi bi-linkedin icons colourlinkdin"> </i></a>
           </div>
         </div>
-        <hr className="top-section-heading-break" />
+        <hr className="top-section-heading-break " />
         <nav className="navbar navbar-expand-lg ">
           <div className="container-fluid navbar ">
             <button className="navbar-toggler respnavbar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,19 +142,29 @@ export default function Home({operations,banner}) {
                     Bio Gas
                   </a>
                 </li>
-                <li className="nav-item ">
-                  <a className="nav-link navbarOne " aria-current="page" href="/biogas-retail">
-                    Biogas Retail Outlet
+                {/* <li className="nav-item ">
+                  <a className="nav-link navbarOne " aria-current="page" href="/our_products">
+                    Our Products
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link navbarOne" href="/project">
                     Our Projects
                   </a>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <a className="nav-link navbarOne" href="/sustainability">
                     Sustainability
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link navbarOne" href="/blogs">
+                    Blogs
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link navbarOne" href="/gallery">
+                    Gallery
                   </a>
                 </li>
                 <li className="nav-item">
@@ -109,23 +172,83 @@ export default function Home({operations,banner}) {
                     Media
                   </a>
                 </li>
-                {/* <li className="nav-item">
-                  <a className="nav-link navbarOne" href="/contactUs">
+                <li className="nav-item ">
+                  <a className="nav-link navbarOne " aria-current="page" href="/contactUs">
                     Contact Us
                   </a>
-                </li> */}
+                </li>
               </ul>
             </div>
           </div>
         </nav>
       </div>
-      <div className="col-12 col-lg-2" id="reqQuote">Request <br />Quote</div>
+      <div className="col-12 col-lg-1" id="reqQuote">
+      <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/7252636.png " alt height={28} className='responsivehight'/>
+      <button type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop" className='colormodel' ><span>Request <br />Quote</span></button>
+           
+           {/* <!-- Modal --> */}
+           <div className="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+             <div className="modal-dialog">
+               <div className="modal-content">
+                 <div className="modal-header">
+                   <h5 className="modal-title" id="staticBackdropLabel">Request Quote</h5>
+                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div className="modal-body">
+                 <form className="row col-12 col-lg-12 my-5 text-start" onSubmit={handleSubmit(onSubmit)}>
+                  <div className="mb-5 col-12 col-lg-6">
+                    <label htmlfor="exampleInputEmail1" className="form-label"  >
+                      Full Name*
+                    </label>
+                    <input type="text" name='full_name' {...register('full_name')} className="form-control" id aria-describedby="emailHelp" required />
+                  </div>
+                  <div className="mb-5 col-12 col-lg-6">
+                    <label htmlfor="exampleInputPassword1" className="form-label">
+                      Company Name*
+                    </label>
+                    <input type="text" name='company_name' {...register('company_name')} className="form-control" id required/>
+                  </div>
+                  <div className="col-12 col-lg-6">
+                    <label htmlfor="inputEmail4" className="form-label">
+                      Email
+                    </label>
+                    <input type="text" name='email' {...register('email')} className="form-control" id aria-describedby="emailHelp" required/>
+                  </div>
+                  <div className="mb-5 col-12 col-lg-6">
+                    <label htmlfor="exampleInputPassword1" className="form-label">
+                      Contact No.*
+                    </label>
+                    <input type="text" name='contact_us' {...register('contact_us')} className="form-control" id required/>
+                  </div>
+                  <div className="mb-3">
+                    <label htmlfor="exampleFormControlTextarea1" className="form-label">
+                      Message
+                    </label>
+                    <textarea className="form-control" name='message' {...register('message')} id="exampleFormControlTextarea1" rows={3} defaultValue={""} required />
+                  </div>
+                     <div className="modal-footer">
+        <button type="submit" className=" ">Submit</button>
+      </div>
+      </form>
+
+                 </div>
+           
+               </div>
+             </div>
+           </div>
+           {/* <!-- Modal end --> */}
+        </div>
     </div>
-    <div className='text-end'>
-          <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." className="float-whatsapp" target="_blank">
-<i className="fa fa-whatsapp my-float"></i>
-</a>
-          </div>
+    {whatsapp.data?.map( (row) => (
+          <div className='text-end whatsapphover'>
+            <span className="hide"></span>
+          {/* <a href="https://api.whatsapp.com/send?phone=.{row?.attributes.number}" className="float-whatsapp" target="_blank"> */}
+          <a href={`https://api.whatsapp.com/send?phone=${row?.attributes.number}`} className="float-whatsapp " target="_blank">
+<i className="fa fa-whatsapp my-float"></i><span className='hide'></span> 
+</a> 
+{/* <div className="hide">1234567890</div> */}
+</div>
+))}
   </div>
   {/* Navigation Ends */}
   {/* section start here */}
@@ -333,7 +456,7 @@ export default function Home({operations,banner}) {
                       <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                     </svg>
                     &nbsp;&nbsp;
-                    <span className='footercolorspan'>1800 890 5180M</span>
+                    <span className='footercolorspan'>1800 890 5180</span>
                   </a>
                   <a href>
                     <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor" className="bi bi-geo-alt footercolorspan" viewBox="0 0 16 16">

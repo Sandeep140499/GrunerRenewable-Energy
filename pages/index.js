@@ -5,28 +5,138 @@ import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown.js'
 
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import { useRouter } from 'next/router';
+
+
+
 export async function getServerSideProps() {
-  const [operationsRes,incidentsRes,biogasRes,logoRes,cngsRes,teamRes,productRes] = await Promise.all([
+  
+  
+  const [operationsRes,incidentsRes,biogasRes,logoRes,cngsRes,teamRes,productRes,whatsappRes] = await Promise.all([
     fetch(`https://whale-app-56hrz.ondigitalocean.app/api/homes/?populate=*`),
     fetch(`https://whale-app-56hrz.ondigitalocean.app/api/home-chooses/?populate=*`),
     fetch(`https://whale-app-56hrz.ondigitalocean.app/api/home-bio-gases/?populate=*`),
     fetch(`https://whale-app-56hrz.ondigitalocean.app/api/home-company-logos/?populate=*`),
     fetch(`https://whale-app-56hrz.ondigitalocean.app/api/home-bio-cngs/?populate=*`),
     fetch(`https://whale-app-56hrz.ondigitalocean.app/api/home-teams/?populate=*`),
-    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/project-details/?populate=*`)
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/project-details/?populate=*`),
+    fetch(`https://whale-app-56hrz.ondigitalocean.app/api/whatsapp-numbers/?populate=*`)
   ]);
-  const [operations,incidents,biogas,logos,cngs,team,product] = await Promise.all([
+
+
+
+  const [operations,incidents,biogas,logos,cngs,team,product,whatsapp] = await Promise.all([
     operationsRes.json(),
     incidentsRes.json(),
     biogasRes.json(),
     logoRes.json(),
     cngsRes.json(),
     teamRes.json(),
-    productRes.json()
+    productRes.json(),
+    whatsappRes.json()
   ]);
-  return { props: { operations,incidents,biogas,logos,cngs,team,product} };
+  return { props: { operations,incidents,biogas,logos,cngs,team,product,whatsapp} };
 }
-export default function Home({operations,incidents,biogas,logos,cngs,team,product}) {
+
+
+
+export default function Home({operations,incidents,biogas,logos,cngs,team,product,whatsapp}) {
+
+
+const { register, formState: { errors }, handleSubmit, } = useForm();
+const router = useRouter();
+
+//function for get in touch form:
+const onGetSubmit = async ({ full_name, company_name, email, contact_us, message, radio }) => {
+  
+  console.log("Full_name ------> ",full_name);
+  console.log("Company_name ------> ",company_name);
+  console.log("Email ------> ",email);
+  console.log("Contact Us ------> ",contact_us);
+  console.log("Message ------> ",message);
+  console.log("Radio ------> ",radio);
+
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer fb4bb95c1c5818bca21514c2d004b5e8f96cd96519c3da3c4410f80c358eed719227df379925869227c30fbb766cdb2e40b62b00fc9db241394bc50d2db94fd9b78cad63e68d4d5285ada57514aee43a37f9a588f8746ad09192368bd68be5865eb20a6e4cde533a65e2c99e025aad0fc3297f93599288534fbcad5ad8513b3a',
+    'Access-Control-Allow-Origin': '*',
+
+  }
+
+  const res = await axios.post('https://whale-app-56hrz.ondigitalocean.app/api/get-in-touches/?populate=*', 
+  { data :
+    { 
+      Full_Name: full_name,
+      company_name: company_name,
+      email: email,
+      contact_no: contact_us,
+      message: message,
+      contact_methed: radio
+    }
+  },{headers})    
+
+  console.log('res :', res);
+
+  if(res.hasOwnProperty('error') && res.error){
+    window.alert(res.error.message)
+  }
+  if(res.data){
+      alert("Form Saved Successfully.");
+       router.push('https://grunerrenewable.com');
+      
+  }
+
+  // You should handle login logic with username, password and remember form data
+  // setUser({ name: name });
+};
+  //
+
+  //Function for request quote form:
+
+  const onSubmit = async ({ full_names, company_names, emails, contacts_us, messages }) => {
+    
+    console.log("Full_name ------> ",full_names);
+    console.log("Company_name ------> ",company_names);
+    console.log("Email ------> ",emails);
+    console.log("Contact Us ------> ",contacts_us);
+    console.log("Message ------> ",messages);
+  
+    const headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer 8ce388a1b4678b38d51f11cefcb8975648df09f76e3a5e8e7c09a5fd9a297556f9bb555758060fb252cdabc7a9e4f7a614290987e0d1bd92412a28157b25da71f62c28a0e949461b15056215ecebdaa1a4d6e6cca12e3dd05f5d6bc7a26e82c18f45f2a05aebad00c683e6791fbcd875d78b6168a705924abdc78e69eb898489',
+      'Access-Control-Allow-Origin': '*',
+  
+    }
+  
+    const res = await axios.post('https://whale-app-56hrz.ondigitalocean.app/api/request-quotes/?populate=*', 
+    { data :
+      { 
+        full_name: full_names,
+        company_name: company_names,
+        email: emails,
+        contact_us: contacts_us,
+        message: messages
+      }
+    },{headers})    
+  
+    console.log('res :', res);
+  
+    if(res.hasOwnProperty('error') && res.error){
+      window.alert(res.error.message)
+    }
+    if(res.data){
+        alert("Form Saved Successfully.");
+         router.push('https://grunerrenewable.com');
+    }
+  
+    // You should handle login logic with username, password and remember form data
+    // setUser({ name: name });
+  };
+    //
+
   return (
     <>
       <Head>
@@ -44,14 +154,14 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
         </link>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"></link>
       </Head>
- {/* start here */}
+
   {/* Navigation Starts */}
   <div className="container-fluid" id="flex-conatiner1">
     <div className="row ">
-      <div className="col-12 col-lg-3 my-auto text-center">
+      <div className="col-12 col-lg-2 my-auto text-center">
         <a href="/"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/logo-gre.svg" className="img-fluid" id="logo" alt="Gruner Renewable Energy" href="/index"/></a>
       </div>
-      <div className="col-12 col-lg-7 pt-lg-4" id>
+      <div className="col-12 col-lg-9 " id>
         <div className="row ">
           <div className="col-12 col-lg-5 boxOneEmail">
             <p>
@@ -74,7 +184,7 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
             <a href="https://www.linkedin.com/company/gruner-renewable-energy/"><i className="bi bi-linkedin icons colourlinkdin"> </i></a>
           </div>
         </div>
-        <hr className="top-section-heading-break" />
+        <hr className="top-section-heading-break " />
         <nav className="navbar navbar-expand-lg ">
           <div className="container-fluid navbar ">
             <button className="navbar-toggler respnavbar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,19 +202,29 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
                     Bio Gas
                   </a>
                 </li>
-                <li className="nav-item ">
-                  <a className="nav-link navbarOne " aria-current="page" href="/biogas-retail">
-                    Biogas Retail Outlet
+                {/* <li className="nav-item ">
+                  <a className="nav-link navbarOne " aria-current="page" href="/our_products">
+                    Our Products
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link navbarOne" href="/project">
                     Our Projects
                   </a>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <a className="nav-link navbarOne" href="/sustainability">
                     Sustainability
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link navbarOne" href="/blogs">
+                    Blogs
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link navbarOne" href="/gallery">
+                    Gallery
                   </a>
                 </li>
                 <li className="nav-item">
@@ -112,14 +232,81 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
                     Media
                   </a>
                 </li>
-
+                <li className="nav-item ">
+                  <a className="nav-link navbarOne " aria-current="page" href="/contactUs">
+                    Contact Us
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
         </nav>
       </div>
-      <div className="col-12 col-lg-2" id="reqQuote">Request <br />Quote</div>
+      <div className="col-12 col-lg-1" id="reqQuote">
+      <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/7252636.png " alt height={28} className='responsivehight'/>
+      <button type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop" className='colormodel' ><span>Request <br />Quote</span></button>    
+{/* <!-- Modal --> */}
+<div className="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div className="modal-dialog ">
+    <div className="modal-content modelboxshadowing">
+      <div className="modal-header">
+        <h5 className="modal-title" id="staticBackdropLabel">Request Quote</h5>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div className="modal-body">
+
+      <form className="row col-12 col-lg-12 my-5 text-start" onSubmit={handleSubmit(onSubmit)}>
+                  <div className="mb-5 col-12 col-lg-6">
+                    <label htmlfor="exampleInputEmail1" className="form-label"  >
+                      Full Name*
+                    </label>
+                    <input type="text" name='full_names' {...register('full_names')} className="form-control" id aria-describedby="emailHelp" required />
+                  </div>
+                  <div className="mb-5 col-12 col-lg-6">
+                    <label htmlfor="exampleInputPassword1" className="form-label">
+                      Company Name*
+                    </label>
+                    <input type="text" name='company_names' {...register('company_names')} className="form-control" id required/>
+                  </div>
+                  <div className="col-12 col-lg-6">
+                    <label htmlfor="inputEmail4" className="form-label">
+                      Email
+                    </label>
+                    <input type="text" name='emails' {...register('emails')} className="form-control" id aria-describedby="emailHelp" required/>
+                  </div>
+                  <div className="mb-5 col-12 col-lg-6">
+                    <label htmlfor="exampleInputPassword1" className="form-label">
+                      Contact No.*
+                    </label>
+                    <input type="text" name='contacts_us' {...register('contacts_us')} className="form-control" id required/>
+                  </div>
+                  <div className="mb-3">
+                    <label htmlfor="exampleFormControlTextarea1" className="form-label">
+                      Message
+                    </label>
+                    <textarea className="form-control" name='messages' {...register('messages')} id="exampleFormControlTextarea1" rows={3} defaultValue={""} required />
+                  </div>
+                     <div className="modal-footer">
+        <button type="submit" className=" ">Submit</button>
+      </div>
+      </form>
+
+      
+      </div>
     </div>
+  </div>
+</div>
+{/* <!-- Modal end --> */}
+        </div>
+    </div>
+    {whatsapp.data?.map( (row) => (
+          <div className='text-end whatsapphover'>
+            <span className="hide"></span>
+          {/* <a href="https://api.whatsapp.com/send?phone=.{row?.attributes.number}" className="float-whatsapp" target="_blank"> */}
+          <a href={`https://api.whatsapp.com/send?phone=${row?.attributes.number}`} className="float-whatsapp " target="_blank">
+<i className="fa fa-whatsapp my-float"></i></a>
+</div>
+))}
   </div>
   {/* Navigation Ends */}
   {/* frame 2 start here */}
@@ -144,14 +331,12 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
           <div className="col-3 col-lg-3 logowhiteplant">
             <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/whiteImages3.png " alt srcSet height={70} />
           </div>
-          <div className="col-12 pb-5 pt-5 pt-lg-0 pb-lg-0 col-lg-3">
-            <button className="fulidbutton">Know More <i className="bi bi-arrow-right" /></button>
-          </div>
-          <div className='text-end'>
-          <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." className="float-whatsapp" target="_blank">
-<i className="fa fa-whatsapp my-float"></i>
-</a></div>
         </div>
+        <div className="col-12 pb-5 pt-5 pt-lg-5 pb-lg-0 col-lg-3">
+        <a href='/biogas'>
+        <button className="fulidbutton">Know More <i className="bi bi-arrow-right" /></button>
+        </a>
+          </div>
       </div>
       </section>
       </div>
@@ -209,7 +394,7 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
             {row?.attributes.home_about_left_desription}
           </ReactMarkdown>
         <div className='pt-5 homepagerespbutton pb-5 pb-lg-0'>
-        <button className="aboutsbutton my-auto">Request Quote <i className="bi bi-arrow-right"></i></button>
+        <button className="aboutsbutton my-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Request Quote <i className="bi bi-arrow-right"></i></button>
         </div>
         </div>
         <div className="col-12 col-lg-5 my-lg-5">
@@ -222,9 +407,7 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
           <div className="row bayehojaa">
             <div className="col-12 ">
               <div className="p-2">
-                <i className="bi bi-check2-circle" id="sign"> &nbsp;
-                  <span id="kuchbhidedo">{row?.attributes.home_about_right_bottom1}</span>
-                </i>
+                <i className="bi bi-check2-circle" id="sign"> &nbsp; <span id="kuchbhidedo">{row?.attributes.home_about_right_bottom1}</span></i>
               </div>
             </div>
             <div className="col-12">
@@ -296,7 +479,7 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
     </div>
     <div className="col-12 col-lg-6 pt-3">
       <div className="border-colorofhomepage my-auto p-3">
-      <span className="ryticonimage"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/Frame 13.png" /></span>
+      <span className="ryticonimage"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/Our Commitment.png" /></span>
         <h1 className='homepagesgreenborderheader'>  {row?.attributes.our_name3}</h1>
         <ReactMarkdown className='homepagegreenborderparagraph'>
           {row?.attributes.our_detail3}
@@ -305,7 +488,7 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
     </div>
     <div className="col-12 col-lg-6 ryt-below pt-3">
       <div className="border-colorofhomepage my-auto p-3">
-      <span className="ryticonimage"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/Our Commitment.png" /></span>
+      <span className="ryticonimage"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/Frame 13.png" /></span>
         <h1 className='homepagesgreenborderheader'>  {row?.attributes.our_name4}</h1>
         <ReactMarkdown className='homepagegreenborderparagraph'>
           {row?.attributes.our_detail4}
@@ -349,7 +532,7 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
   <div className="row g-2 p-lg-3 resposvibeblocks">
     <div className="col-12 col-lg-4 pt-5 pt-lg-0">
       <div className="p-3 homepagegreenborderparagraph border-colorofhomepagenbiogas ">
-      <span className="ryticonimage"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/ourTech.png" /></span>
+      <span className="ryticonimage"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/Untitled%20(9).png" /></span>
       <h1 className='homepagesgreenborderheader'> {row?.attributes.blog_title1}</h1>
         <ReactMarkdown className='homepagegreenborderparagraph pb-lg-3'> 
         {row?.attributes.blog_detail1}
@@ -358,7 +541,7 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
     </div>
     <div className="col-12 col-lg-4 pt-5 pt-lg-0">
       <div className="p-3 homepagegreenborderparagraph border-colorofhomepagenbiogas">
-      <span className="ryticonimage"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/ourTech.png" /></span>
+      <span className="ryticonimage"><img src="https://gremedia.sgp1.digitaloceanspaces.com/media/Untitled%20(7).png" /></span>
       <h1 className='homepagesgreenborderheader'>  {row?.attributes.blog_title2}</h1>
       <ReactMarkdown className='homepagegreenborderparagraph pb-lg-3'> 
         {row?.attributes.blog_detail2}
@@ -386,14 +569,14 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
           <div className="col-12 col-lg-6">
             <div className="container text-center ">
               {/* <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/India.png" alt="" className="indiaMAP"/> */}
-              <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/8833d632-439f-444a-9712-b62d22923b16.png" alt className="indiaMAP img-fluid" />
+              <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/3d-india-white-map-grey-24195924-removebg-preview.png" alt className="indiaMAP img-fluid" />
             </div>
           </div>
           <div className="col-12 col-lg-6 p-lg-5 p-5">
             <span className="Biocng p-lg-3">BIO - CNG</span>
             <h1 className="biocngheading pt-5">{row?.attributes.title}</h1>
             <ReactMarkdown className="paraheadingcng pt-5">{row?.attributes.description}</ReactMarkdown>
-            <button className="cngbutton my-5">Request Quote <i className="bi bi-arrow-right" /></button>
+            <button className="cngbutton my-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Request Quote <i className="bi bi-arrow-right" /></button>
           </div>
         </div>
       </section>
@@ -401,7 +584,7 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
          ))}
       {/* frame 8 end here */}
       {/* frame 9 start */}
-      <div className="container-fluid p-0">
+      {/* <div className="container-fluid p-0">
         <div className="container pb-3">
           <div className="row pt-5">
             <div className="col-12 text-center">
@@ -423,32 +606,11 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
                 </div>
               </div>
                ))}
-              {/* <div className="col-12 col-lg-4">
-                <div className="p-3 ">
-                  <div className="containerImages">
-                    <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/supply 1.jpg" alt="Notebook" style={{"width":"100%"}} />
-                    <div className="contentParagraph p-lg-3">
-                      <p className="ourprojectparagraph p-3 pt-lg-5 p-lg-0">Project B: The detailed announcement will be coming soon</p>
-                      <button className=" btn-secondary exploremorebutton">EXPLORE <i className="bi bi-arrow-right" /></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-lg-4">
-                <div className="p-3 ">
-                  <div className="containerImages">
-                    <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/supply 1.jpg" alt="Notebook" className='conatinerImages' style={{"width":"100%"}} />
-                    <div className="contentParagraph p-lg-3">
-                      <p className="ourprojectparagraph p-3 pt-lg-5 p-lg-0">Project C: The detailed announcement will be coming soon</p>
-                      <button className=" btn-secondary exploremorebutton">EXPLORE <i className="bi bi-arrow-right" /></button>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+            
             </div>
           </div>
         </div>
-        </div>
+        </div> */}
         {/* four image start here */}
         {/* frame 9 end */}
         <div className="container pt-lg-5 pb-lg-5">
@@ -461,44 +623,26 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
               <p className="ourteamparagraph pt-5 pt-lg-3">Gruner Renewables is a leading player in the renewable energy industry and has been actively involved in setting up BIO CNG plants in India. We have been using state-of-the-art technology, for the production of biogas from organic waste.</p>
             </div>
             <div className="col-12 col-lg-8 ">
-              <div className="col-12 col-lg-12 pt-5 pt-lg-0">
+              <div className="col-12 col-lg-12 pt-5 pt-lg-2">
                 <div className>
                   <div className="row">
                   {team.data?.map( (row) => (
-                    <div className="col-md-4 p-3">
+                    <div className="col-md-3 p-3">
                     <div className="thumbnail">
-                <a href>
+                <a href={`/biography/${row?.attributes.Slug}`}>
                   <img src={ row?.attributes.image_team.data[0].attributes.url} className="img-fluid" alt style={{"width":"100%"}} />
-                  <div className="caption-baground p-lg-2">
+                  {/* <button type="submit" data-bs-toggle="modal" data-bs-target="#staticBackpopup" className="caption-baground p-lg-1 "> */}
+                  <div className="caption-baground p-lg-1">
                     <h1 className="girishBansal-heading ">{row?.attributes.name}</h1>
                     <p className="Designation ">{row?.attributes.description}</p>
                   </div>
+                  {/* </button> */}
+
                 </a>
               </div>
                     </div>
                      ))}
-                    {/* <div className="col-md-4 p-3">
-                    <div className="thumbnail">
-                <a href>
-                  <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/Rectangle-144 (2).jpg" className="img-fluid" alt style={{"width":"100%"}} />
-                  <div className="caption-baground p-lg-2">
-                    <h1 className="girishBansal-heading ">Mr. Girish Bansal</h1>
-                    <p className="Designation">Designation</p>
-                  </div>
-                </a>
-              </div>
-                    </div>
-                    <div className="col-md-4 p-3">
-                    <div className="thumbnail">
-                <a href>
-                  <img src="https://gremedia.sgp1.digitaloceanspaces.com/media/Rectangle-144 (1).jpg" className="img-fluid" alt style={{"width":"100%"}} />
-                  <div className="caption-baground p-lg-2">
-                    <h1 className="girishBansal-heading ">Mr. Girish Bansal</h1>
-                    <p className="Designation ">Designation</p>
-                  </div>
-                </a>
-              </div>
-                    </div> */}
+                
                   </div>
                 </div>
               </div>
@@ -561,36 +705,37 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
               <div className="col-12 col-lg-6 whitebackroundform p-lg-5 p-5">
                 <h3 className="text-center projectHeadingform" >Get In Touch </h3>
                 <div>
-                <form className="row col-12 col-lg-12 my-5 text-start">
+
+                <form className="row col-12 col-lg-12 my-5 text-start" onSubmit={handleSubmit(onGetSubmit)} >
                   <div className="mb-5 col-12 col-lg-6">
                     <label htmlfor="exampleInputEmail1" className="form-label">
                       Full Name*
                     </label>
-                    <input type="text" className="form-control" id aria-describedby="emailHelp" />
+                    <input type="text" name='full_name' {...register('full_name')}  className="form-control" id aria-describedby="emailHelp" />
                   </div>
                   <div className="mb-5 col-12 col-lg-6">
                     <label htmlfor="exampleInputPassword1" className="form-label">
                       Company Name*
                     </label>
-                    <input type="text" className="form-control" id />
+                    <input type="text" name='company_name' {...register('company_name')} className="form-control" id />
                   </div>
                   <div className="col-12 col-lg-6">
                     <label htmlfor="inputEmail4" className="form-label">
                       Email
                     </label>
-                    <input type="text" className="form-control" id aria-describedby="emailHelp" />
+                    <input type="text" name='email' {...register('email')} className="form-control" id aria-describedby="emailHelp" />
                   </div>
                   <div className="mb-5 col-12 col-lg-6">
                     <label htmlfor="exampleInputPassword1" className="form-label">
                       Contact No.*
                     </label>
-                    <input type="text" className="form-control" id />
+                    <input type="text" name='contact_us' {...register('contact_us')} className="form-control" id />
                   </div>
                   <div className="mb-3">
                     <label htmlfor="exampleFormControlTextarea1" className="form-label">
                       Message
                     </label>
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows={3} defaultValue={""} />
+                    <textarea className="form-control" name='message' {...register('message')} id="exampleFormControlTextarea1" rows={3} defaultValue={""} />
                   </div>
                   <div className='pt-3'>Preferred Contact Method*</div>
                   <div className="row ">
@@ -600,9 +745,9 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
     <input
     className="form-check-input"
     type="radio"
-    name="exampleRadios"
+    name='radio' {...register('radio')}
     id="exampleRadios1"
-    defaultValue="option1"
+    defaultValue="all"
     defaultChecked=""
   />
   <label className="form-check-label pt-2 mx-3" htmlFor="exampleRadios1">
@@ -613,9 +758,9 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
     <input
     className="form-check-input"
     type="radio"
-    name="exampleRadios"
+    name='radio' {...register('radio')}
     id="exampleRadios1"
-    defaultValue="option1"
+    defaultValue="phone"
     defaultChecked=""
   />
   <label className="form-check-label pt-2 mx-3" htmlFor="exampleRadios1">
@@ -626,9 +771,9 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
     <input
     className="form-check-input"
     type="radio"
-    name="exampleRadios"
+    name='radio' {...register('radio')}
     id="exampleRadios1"
-    defaultValue="option1"
+    defaultValue="email"
     defaultChecked=""
   />
   <label className="form-check-label pt-2 mx-3" htmlFor="exampleRadios1">
@@ -691,7 +836,7 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
                       <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                     </svg>
                     &nbsp;&nbsp;
-                    <span className='footercolorspan'>1800 890 5180M</span>
+                    <span className='footercolorspan'>1800 890 5180</span>
                   </a>
                   <a href>
                     <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor" className="bi bi-geo-alt footercolorspan " viewBox="0 0 16 16">
@@ -739,8 +884,8 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
                 <form action>
                   <input type="text" name id placeholder="Enter your mail Address" />
                   <div className="pt-lg-3">
-                    <button type="submit">
-                    <span>Submit</span>
+                    <button type="submit footersubmit p-lg-4">
+                    <span className=''>Submit</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
                       <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                     </svg>
@@ -762,4 +907,4 @@ export default function Home({operations,incidents,biogas,logos,cngs,team,produc
       </script>
     </>
   )
-}
+                  }
